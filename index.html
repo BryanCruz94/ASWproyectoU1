@@ -1,29 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <title>ECUA-TRAVELS</title>
-</head>
-<body>
-    <div class="container">
-        <div class="row mt-2">
-            <div class="col">
-                <header>
-                    <H1>ECUA-TRAVELS</H1>
-                </header>
-                <HR>
+    <style>
+        * {
+            /* border: 1px solid; */
+        }
 
-                    
+        nav {
+
+            border-top: 1px solid;
+            border-bottom: 2px solid;
+        }
+
+        #encabezado {
+
+            height: 160px;
+
+        }
+
+        #encabezado::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-image: url('assets/imgIndex/encabezado2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.48;
+            height: 150px;
+        }
+
+        /* estilos solo de index */
+
+        .image-container {
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .image-container:hover  {
+            transform: scaleX(1.5);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="row mt-2">
+        <div class="col">
+            <header class="row justify-content-center align-items-center" id="encabezado">
+                <div class="col-1  ">
+                    <div class="row justify-content-end mt-1 ml-1">
+                        <div class="col align-self-end">
+                            <img src="assets/imgIndex/logotipo-de-instagram.png" width="20px" alt="">
+                        </div>
+                    </div>
+                    <div class="row justify-content-end mt-1 ml-1">
+                        <div class="col align-self-end">
+                            <img src="assets/imgIndex/facebook.png" width="20px" alt="">
+                        </div>
+                    </div>
+                    <div class="row justify-content-end mt-1 ml-1">
+                        <div class="col align-self-end">
+                            <img src="assets/imgIndex/correo-electronico-vacio.png" width="25px" alt="">
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- 
+                    TEXTO COLOR BLANCO
+                    <div class="col-9">
+                    <H1 class="text-center text-white">ECUA-TRAVELS</H1>
+                    <div class="text-center text-white h5">Al menos una vez en la vida debes visitar Ecuador, y vivir la aventura
+                        de conocer un país de paisajes tan variados y entretenimiento por montón</div>
+
+                </div> -->
+
+                <div class="col-10">
+                    <H1 class="text-center ">ECUA-TRAVELS</H1>
+                    <div class="text-center  h5">Al menos una vez en la vida debes visitar Ecuador, y vivir la
+                        aventura
+                        de conocer un país de paisajes tan variados y entretenimiento por montón</div>
+
+                </div>
+                <div class="col-1"></div>
+
+            </header>
+            <div class="container">
+
+                <nav class=" navbar-expand-lg navbar-light bg-light">
+
+                    <ul class="nav navbar-nav  justify-content-center">
+                        <div class="col">
+                            <li class="nav-item">
+                                <!-- *************AQUI SE DEBE CAMBIAR EL HIPERVINCULO**************** -->
+                                <a class="nav-link navbar-brand" href="#">INICIO</a>
+                            </li>
+                        </div>
+                        <div class="col">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">COSTA</a>
+                            </li>
+                        </div>
+                        <div class="col">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SIERRA</a>
+                            </li>
+                        </div>
+                        <div class="col">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">AMAZONÍA</a>
+                            </li>
+                        </div>
+                        <div class="col">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">GALÁPAGOS</a>
+                            </li>
+                        </div>
+                    </ul>
+
+                </nav>
+
+
                 <main>
                     <!-- *************** A PARTIR DE AQUÍ VA EL CÓDIGO DE CADA REGIÓN ****************** -->
+                    <div class="container">
+                        <div class="row mt-3 no-gutters">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="image-container img-fluid rounded">
+                                    <img src="assets/imgIndex/costa.jpg" alt="Imagen 1" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="image-container img-fluid rounded">
+                                    <img src="assets/imgIndex/sierra.jpg" alt="Imagen 2" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="image-container img-fluid rounded">
+                                    <img src="assets/imgIndex/amazonia.jpg" alt="Imagen 3" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="image-container img-fluid rounded">
+                                    <img src="assets/imgIndex/galapagos.jpg" alt="Imagen 4" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
 
 
                     <!-- *************** AQUI FINALIZA EL CÓDIGO DE CADA REGIÓN ****************** -->
                 </main>
-                
+
                 <footer class="row">
                     <div class="col">
                         formulario
@@ -38,6 +181,7 @@
             </div>
         </div>
     </div>
-    
+
 </body>
+
 </html>
