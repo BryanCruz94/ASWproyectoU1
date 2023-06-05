@@ -12,10 +12,11 @@
             /* border: 1px solid; */
         }
 
-        .logo{
+        .logo {
             transition: all 0.3s ease-in-out;
         }
-        .logo:hover{
+
+        .logo:hover {
             margin-left: 8px;
             transform: scale(1.5);
         }
@@ -53,7 +54,7 @@
             transition: all 0.3s ease-in-out;
         }
 
-        .image-container:hover  {
+        .image-container:hover {
             transform: scaleX(1.5);
         }
     </style>
@@ -68,7 +69,8 @@
                 <div class="col-1  ">
                     <div class="row justify-content-end mt-1 ml-1">
                         <div class="col align-self-end">
-                           <a href="#"> <img class="logo" src="assets/imgIndex/logotipo-de-instagram.png" width="20px" alt=""></a>
+                            <a href="#"> <img class="logo" src="assets/imgIndex/logotipo-de-instagram.png" width="20px"
+                                    alt=""></a>
                         </div>
                     </div>
                     <div class="row justify-content-end mt-1 ml-1">
@@ -78,7 +80,8 @@
                     </div>
                     <div class="row justify-content-end mt-1 ml-1">
                         <div class="col align-self-end">
-                            <a href="#"> <img class="logo" src="assets/imgIndex/correo-electronico-vacio.png" width="25px" alt=""></a>
+                            <a href="#"> <img class="logo" src="assets/imgIndex/correo-electronico-vacio.png"
+                                    width="25px" alt=""></a>
                         </div>
                     </div>
 
@@ -132,80 +135,140 @@
                 </nav>
 
 
-                    
+
                 <main>
                     <!-- *************** A PARTIR DE AQUÍ VA EL CÓDIGO DE CADA REGIÓN ****************** -->
+                    <div class="container">
+                        <div id="accordion">
+                            <!-- Opción 1 -->
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                            aria-expanded="true" aria-controls="collapseOne">
+                                            Opción 1
+                                        </button>
+                                    </h5>
+                                </div>
 
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Contenido de la opción 1
+                                    </div>
+                                </div>
+                            </div>
 
+                            <!-- Opción 2 -->
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            Opción 2
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Contenido de la opción 2
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Opción 3 -->
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Opción 3
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Contenido de la opción 3
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- *************** AQUI FINALIZA EL CÓDIGO DE CADA REGIÓN ****************** -->
                 </main>
             </div>
 
-                <footer class="row justify-content-center ml-3 mr-3" style="border-top:3px solid; background-color: rgb(46, 48, 49); color:white" >
-                    <div class="col-lg-4 col-md-8 col-sm-11 align-self-center" >
-                        <h5 class="text-center m-2">DÉJANOS TUS COMENTARIOS</h5>
-                        <form action="#" id="formulario" class="border rounded p-4"
-                            style="background-color: #c3dccb91;">
-                            <!-- fila de datos -->
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label for="nombre">Nombre y Apellido: </label>
-                                        <input type="text" class="form-control" placeholder="Nombre y Apellido"
-                                            name="nombre" id="nombre">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="nombre">Correo Electrónico: </label>
-                                        <input type="text" class="form-control" placeholder="@espe.edu.ec" name="nombre"
-                                            id="nombre">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="mensaje">Mensaje: </label>
-                                        <textarea name="mensaje" id="mensaje" cols="30" rows="3" class="form-control">
+            <footer class="row justify-content-center ml-3 mr-3"
+                style="border-top:3px solid; background-color: rgb(46, 48, 49); color:white">
+                <div class="col-lg-4 col-md-8 col-sm-11 align-self-center">
+                    <h5 class="text-center m-2">DÉJANOS TUS COMENTARIOS</h5>
+                    <form action="#" id="formulario" class="border rounded p-4" style="background-color: #c3dccb91;">
+                        <!-- fila de datos -->
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre y Apellido: </label>
+                                    <input type="text" class="form-control" placeholder="Nombre y Apellido"
+                                        name="nombre" id="nombre">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nombre">Correo Electrónico: </label>
+                                    <input type="text" class="form-control" placeholder="@espe.edu.ec" name="nombre"
+                                        id="nombre">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mensaje">Mensaje: </label>
+                                    <textarea name="mensaje" id="mensaje" cols="30" rows="3" class="form-control">
                                         </textarea>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <!-- fila de condiciones -->
-                            <div class="row justify-content-center">
-                                <div class="col text-center">
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" name="terminos" id="terminos"
-                                                class="form-check-label mr-2">Acepto recibir correos
-                                            informativos</label>
-                                    </div>
                                 </div>
                             </div>
 
-                            <!-- fila de boton -->
-                            <div class="row justify-content-center mt-2">
-                                <button class="col-lg-5 col-md-11 col-sm-11 col-xm-11 btn btn-primary"
-                                    type="submit">Enviar</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-lg-4 col-md-8 col-sm-11 align-self-center">
-                        <h5 class="text-center m-4">CONTÁCTANOS</h5>
-                        <p class="text-center">
-                            Av. Amazonas N34-451 y Av. Atahualpa <br>
-                            Quito - Ecuador <br>
-                            Teléfono: 593-2-396-1300 / 1400 / 1500 <br>
-                            1800-TRAVEL
-                        </p>
 
-                    </div>
-                    <div class="col-lg-4 col-md-8 col-sm-11 align-self-center">
-                        <h5 class="text-center mt-3">ENCUÉNTRANOS</h5>
-                        <iframe class="border"
-                            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d34061.39853387128!2d-78.49690433964722!3d-0.18395374830270877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMINISTERIO%20DE%20TURISMO!5e0!3m2!1ses!2sec!4v1685843890886!5m2!1ses!2sec"
-                            width="99%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </footer>
-            
+                        </div>
+                        <!-- fila de condiciones -->
+                        <div class="row justify-content-center">
+                            <div class="col text-center">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" name="terminos" id="terminos"
+                                            class="form-check-label mr-2">Acepto recibir correos
+                                        informativos</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- fila de boton -->
+                        <div class="row justify-content-center mt-2">
+                            <button class="col-lg-5 col-md-11 col-sm-11 col-xm-11 btn btn-primary"
+                                type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-11 align-self-center">
+                    <h5 class="text-center m-4">CONTÁCTANOS</h5>
+                    <p class="text-center">
+                        Av. Amazonas N34-451 y Av. Atahualpa <br>
+                        Quito - Ecuador <br>
+                        Teléfono: 593-2-396-1300 / 1400 / 1500 <br>
+                        1800-TRAVEL
+                    </p>
+
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-11 align-self-center">
+                    <h5 class="text-center mt-3">ENCUÉNTRANOS</h5>
+                    <iframe class="border"
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d34061.39853387128!2d-78.49690433964722!3d-0.18395374830270877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMINISTERIO%20DE%20TURISMO!5e0!3m2!1ses!2sec!4v1685843890886!5m2!1ses!2sec"
+                        width="99%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </footer>
+
         </div>
     </div>
 
