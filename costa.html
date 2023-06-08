@@ -5,16 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
     <title>ECUA-TRAVELS</title>
     <style>
-        
-
-
         .parrafo1 {
             text-align: center;
 
@@ -38,11 +33,6 @@
             padding: 5px;
         }
 
-        .rowGatronomia {
-            /* text-align: justify;*/
-
-        }
-
         .explicacionTradiciones {
             margin: 5x;
             text-align: center;
@@ -55,7 +45,9 @@
 
         }
 
-
+        * {
+            /* border: 1px solid; */
+        }
 
         .logo {
             transition: all 0.3s ease-in-out;
@@ -92,6 +84,16 @@
             height: 150px;
         }
 
+        /* estilos solo de index */
+
+        .image-container {
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .image-container:hover {
+            transform: scaleX(1.5);
+        }
     </style>
 
 
@@ -123,6 +125,7 @@
 
                 </div>
 
+
                 <div class="col-10">
                     <H1 class="text-center ">ECUA-TRAVELS</H1>
                     <div class="text-center  h5">Al menos una vez en la vida debes visitar Ecuador, y vivir la
@@ -140,17 +143,18 @@
                     <ul class="nav navbar-nav  justify-content-center text-center">
                         <div class="col">
                             <li class="nav-item">
+                                <!-- *************AQUI SE DEBE CAMBIAR EL HIPERVINCULO**************** -->
                                 <a class="nav-link " href="index.html">INICIO</a>
                             </li>
                         </div>
                         <div class="col">
                             <li class="nav-item">
-                                <a class="nav-link text-light bg-dark  fw-bold" href="costa.html">COSTA</a>
+                                <a class="nav-link " href="costa.html">COSTA</a>
                             </li>
                         </div>
                         <div class="col">
                             <li class="nav-item">
-                                <a class="nav-link " href="sierra.html">SIERRA</a>
+                                <a class="nav-link text-light bg-dark fw-bold" href="sierra.html">SIERRA</a>
                             </li>
                         </div>
                         <div class="col">
@@ -167,11 +171,17 @@
 
                 </nav>
 
+
                 <main>
                     <!-- *************** A PARTIR DE AQUÍ VA EL CÓDIGO DE CADA REGIÓN ****************** -->
 
-                    <div class="container p-5">
+                    <div class="container">
                         <div class="row">
+                            <div class="m-4 text-center">
+                                <img src="imgCosta/Inicio.jpg" alt="" class="img-fluid">
+                            </div>
+                            <hr>
+                            <hr>
                             <!-- *************** PEQUEÑA RESEÑA DE LA REGIÓN COSTA ****************** -->
                             <div class="parrafo1 col-lg-6">
                                 <p> Bañadas por las aguas del Océano Pacífico y con un clima cálido tropical, durante
@@ -260,9 +270,10 @@
                                     ellas.</p>
                             </div>
                             <hr>
-                            <!-- *************** EXPLICACION DE LUGARES TURISTICOS ****************** -->
 
-                            <div class="explicacionTuristico col--lg-2">
+
+                            <!-- *************** EXPLICACION DE LUGARES TURISTICOS ****************** -->
+                            <div class="explicacionTuristico col-lg-12">
                                 <h2>LUGARES TURISTICOS</h2>
                                 <br>
                                 <div class="row ">
@@ -281,11 +292,12 @@
                                             lugar, donde cada día de la semana hay una fiesta distinta.</p>
                                     </div>
                                     <div class="explicacionTuristico col-lg-4">
+                                        <br>
+                                        <br>
                                         <img src="imgCosta/montañita.jpg" height="100px" width="200px">
                                     </div>
 
                                     <div class="detalleTur col-lg-8">
-                                        <br>
                                         <br>
                                         <center>
                                             <h5> Bosque Petrificado Puyango</h5>
@@ -300,12 +312,12 @@
                                         </p>
                                     </div>
                                     <div class="explicacionTuristico col-lg-4">
-                                        
+                                        <br>
+                                        <br>
                                         <img src="imgCosta/Bosque.jpg" height="100px" width="200px">
                                     </div>
 
                                     <div class="detalleTur col-lg-8">
-                                        <br>
                                         <br>
                                         <center>
                                             <h5> Atacames</h5>
@@ -321,13 +333,13 @@
                                             país.</p>
                                     </div>
                                     <div class="explicacionTuristico col-lg-4">
-                                        
+                                        <br>
+                                        <br>
                                         <img src="imgCosta/Atacames.jpg" height="100" width="200">
                                     </div>
 
 
                                     <div class="detalleTur col-lg-8">
-                                        <br>
                                         <br>
                                         <center>
                                             <h5> Playa Los Frailes</h5>
@@ -344,11 +356,12 @@
                                     </div>
 
                                     <div class="explicacionTuristico col-lg-4">
+                                        <br>
+                                        <br>
                                         <img src="imgCosta/PalyaFrailes.jpg" height="100px" width="200px">
                                     </div>
 
                                     <div class="detalleTur col-lg-8">
-                                        <br>
                                         <br>
                                         <center>
                                             <h5> Malecón 2000</h5>
@@ -366,12 +379,14 @@
                                             atracciones. </p>
                                     </div>
                                     <div class="explicacionTuristico col-lg-4">
-                                       
+                                        <br>
+                                        <br>
                                         <img src="imgCosta/Malecon2000.jpg" height="100px" width="200px">
                                     </div>
                                 </div>
                             </div>
                             <hr>
+
 
                             <!-- *************** EXPLICACION GASTRONOMICA ****************** -->
                             <div class="explicacionGastronomia">
