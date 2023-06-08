@@ -10,9 +10,7 @@
 
     <title>ECUA-TRAVELS</title>
     <style>
-        .row {
-            padding: 10px;
-        }
+ 
 
 
         .parrafo1 {
@@ -38,11 +36,6 @@
             padding: 5px;
         }
 
-        .rowGatronomia {
-            /* text-align: justify;*/
-
-        }
-
         .explicacionTradiciones {
             margin: 5x;
             text-align: center;
@@ -55,8 +48,7 @@
 
         }
 
-
-        <style>* {
+        * {
             /* border: 1px solid; */
         }
 
@@ -93,6 +85,17 @@
             background-repeat: no-repeat;
             opacity: 0.48;
             height: 150px;
+        }
+
+        /* estilos solo de index */
+
+        .image-container {
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .image-container:hover {
+            transform: scaleX(1.5);
         }
     </style>
 
@@ -143,17 +146,18 @@
                     <ul class="nav navbar-nav  justify-content-center text-center">
                         <div class="col">
                             <li class="nav-item">
+                                <!-- *************AQUI SE DEBE CAMBIAR EL HIPERVINCULO**************** -->
                                 <a class="nav-link " href="index.html">INICIO</a>
                             </li>
                         </div>
                         <div class="col">
                             <li class="nav-item">
-                                <a class="nav-link text-light bg-dark  fw-bold" href="costa.html">COSTA</a>
+                                <a class="nav-link " href="costa.html">COSTA</a>
                             </li>
                         </div>
                         <div class="col">
                             <li class="nav-item">
-                                <a class="nav-link " href="sierra.html">SIERRA</a>
+                                <a class="nav-link text-light bg-dark fw-bold" href="sierra.html">SIERRA</a>
                             </li>
                         </div>
                         <div class="col">
@@ -168,8 +172,7 @@
                         </div>
                     </ul>
 
-                </nav>
-
+                </nav>  
 
 
                 <main>
@@ -272,106 +275,90 @@
                                 <br>
                                 <div class="row ">
                                     <br>
-                                    <div class="detalleTur col-lg-8">
+                                    <div class="detalleTur col-8">
                                         <br>
                                         <center>
                                             <h5> Montañita</h5>
                                         </center>
-                                        <p>Un pequeño pueblo convertido en punto de encuentro para todo turista que
-                                            visita el Ecuador;
-                                            encuentras gente de distintas partes del mundo, atraídos por sus reconocidas
-                                            olas, buen
-                                            clima, el agradable estilo de vida bohemio y las entretenidas farras
-                                            nocturnas que goza el
+                                        <p>Un pequeño pueblo convertido en punto de encuentro para todo turista que visita el Ecuador;
+                                            encuentras gente de distintas partes del mundo, atraídos por sus reconocidas olas, buen
+                                            clima, el agradable estilo de vida bohemio y las entretenidas farras nocturnas que goza el
                                             lugar, donde cada día de la semana hay una fiesta distinta.</p>
                                     </div>
-                                    <div class="explicacionTuristico col-lg-4">
+                                    <div class="explicacionTuristico col-4">
+                                        <br>
+                                        <br>
                                         <img src="imgCosta/montañita.jpg" height="100px" width="200px">
                                     </div>
-
-                                    <div class="detalleTur col-lg-8">
-                                        <br>
+                
+                                    <div class="detalleTur col-8">
                                         <br>
                                         <center>
                                             <h5> Bosque Petrificado Puyango</h5>
                                         </center>
-                                        <p>Conformado por árboles con una edad aproximada de 100 millones de años y es
-                                            tal vez la mayor
-                                            colección de madera petrificada en el mundo; el ejemplar más grande tiene 2
-                                            m de diámetro y
-                                            15 m de largo. También se encuentran fósiles de hojas que corresponden a
-                                            cuatro géneros de
+                                        <p>Conformado por árboles con una edad aproximada de 100 millones de años y es tal vez la mayor
+                                            colección de madera petrificada en el mundo; el ejemplar más grande tiene 2 m de diámetro y
+                                            15 m de largo. También se encuentran fósiles de hojas que corresponden a cuatro géneros de
                                             plantas primitivas semejantes a los helechos y palmas actuales.
                                         </p>
                                     </div>
-                                    <div class="explicacionTuristico col-lg-4">
-                                        
+                                    <div class="explicacionTuristico col-4">
+                                        <br>
+                                        <br>
                                         <img src="imgCosta/Bosque.jpg" height="100px" width="200px">
                                     </div>
-
-                                    <div class="detalleTur col-lg-8">
-                                        <br>
+                
+                                    <div class="detalleTur col-8">
                                         <br>
                                         <center>
                                             <h5> Atacames</h5>
                                         </center>
-                                        <p>Se localiza al norte de la región litoral del Ecuador, asentada en una
-                                            extensa llanura, a
-                                            orillas del océano Pacífico. Es famosa en todo el Ecuador por poseer una de
-                                            las playas más
-                                            grandes del Ecuador y una de las más cercanas a Quito; por lo que la mayoría
-                                            de los
-                                            habitantes de esta ciudad hacen de este balneario uno de los más concurridos
-                                            y populares del
+                                        <p>Se localiza al norte de la región litoral del Ecuador, asentada en una extensa llanura, a
+                                            orillas del océano Pacífico. Es famosa en todo el Ecuador por poseer una de las playas más
+                                            grandes del Ecuador y una de las más cercanas a Quito; por lo que la mayoría de los
+                                            habitantes de esta ciudad hacen de este balneario uno de los más concurridos y populares del
                                             país.</p>
                                     </div>
-                                    <div class="explicacionTuristico col-lg-4">
-                                        
+                                    <div class="explicacionTuristico col-4">
+                                        <br>
+                                        <br>
                                         <img src="imgCosta/Atacames.jpg" height="100" width="200">
                                     </div>
-
-
-                                    <div class="detalleTur col-lg-8">
-                                        <br>
+                
+                
+                                    <div class="detalleTur col-8">
                                         <br>
                                         <center>
                                             <h5> Playa Los Frailes</h5>
                                         </center>
-                                        <p>Una playa encantadora y muy limpia (gracias a que se encuentra dentro del
-                                            Parque Nacional
-                                            Machalilla,), su arena es blanca, el tono del mar cambia a turquesa y en el
-                                            sitio existe un
-                                            mirador –Las Fragatas– que, para llegar a la parte alta y ser testigo de una
-                                            vista única, se
-                                            atraviesa primero por un sendero lleno de naturaleza. Por este mismo camino
-                                            se llega a la
+                                        <p>Una playa encantadora y muy limpia (gracias a que se encuentra dentro del Parque Nacional
+                                            Machalilla,), su arena es blanca, el tono del mar cambia a turquesa y en el sitio existe un
+                                            mirador –Las Fragatas– que, para llegar a la parte alta y ser testigo de una vista única, se
+                                            atraviesa primero por un sendero lleno de naturaleza. Por este mismo camino se llega a la
                                             playa de La Tortuga, otra orilla natural que no puedes dejar de visitar.</p>
                                     </div>
-
-                                    <div class="explicacionTuristico col-lg-4">
+                
+                                    <div class="explicacionTuristico col-4">
+                                        <br>
+                                        <br>
                                         <img src="imgCosta/PalyaFrailes.jpg" height="100px" width="200px">
                                     </div>
-
-                                    <div class="detalleTur col-lg-8">
-                                        <br>
+                
+                                    <div class="detalleTur col-8">
                                         <br>
                                         <center>
                                             <h5> Malecón 2000</h5>
                                         </center>
-                                        <p>Es un proyecto de regeneración urbana del antiguo Malecón Simón Bolívar, de
-                                            2.5 km de
-                                            extensión en donde se puede disfrutar de los grandes monumentos de la
-                                            historia de Guayaquil,
-                                            museos, jardines, fuentes, centro comercial, restaurantes, bares, patios de
-                                            comida, el
-                                            primer cine IMAX de Sudamérica, así como muelles, desde donde se puede
-                                            abordar embarcaciones
-                                            para realizar paseos diurnos y nocturnos por el río Guayas y miradores entre
-                                            otras
+                                        <p>Es un proyecto de regeneración urbana del antiguo Malecón Simón Bolívar, de 2.5 km de
+                                            extensión en donde se puede disfrutar de los grandes monumentos de la historia de Guayaquil,
+                                            museos, jardines, fuentes, centro comercial, restaurantes, bares, patios de comida, el
+                                            primer cine IMAX de Sudamérica, así como muelles, desde donde se puede abordar embarcaciones
+                                            para realizar paseos diurnos y nocturnos por el río Guayas y miradores entre otras
                                             atracciones. </p>
                                     </div>
-                                    <div class="explicacionTuristico col-lg-4">
-                                       
+                                    <div class="explicacionTuristico col-4">
+                                        <br>
+                                        <br>
                                         <img src="imgCosta/Malecon2000.jpg" height="100px" width="200px">
                                     </div>
                                 </div>
