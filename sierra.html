@@ -64,12 +64,15 @@
             transform: scaleX(1.5);
         }
 
-
-        .accordion-image {
+        .accordion-image,
+        .accordion-image-title,
+        .accordion-image-text {
             transition: transform 0.3s ease-in-out;
         }
 
-        .accordion-image:hover {
+        .accordion-image:hover,
+        .accordion-image-title:hover,
+        .accordion-image-text:hover {
             transform: scale(1.1);
         }
     </style>
@@ -311,8 +314,8 @@
                                 <div class="card text-center mb-3">
                                     <img src="assets/imgSierra/mamaNegra.jpg" style="height: 260px;" class="card-img-top accordion-image" alt="">
                                     <div class="card-body">
-                                        <h5 class="card-title">La Mama Negra</h5>
-                                        <p class="card-text">
+                                        <h5 class="card-title accordion-image-title">La Mama Negra</h5>
+                                        <p class="card-text accordion-image-text">
                                             Es una fiesta que se realiza, dos veces al año, en la ciudad ecuatoriana de Latacunga,
                                             capital de la Provincia de Cotopaxi.
                                         </p>
@@ -323,8 +326,8 @@
                                 <div class="card text-center mb-3">
                                     <img src="assets/imgSierra/intiRaymi.jpg" class="card-img-top accordion-image" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Inti Raymi</h5>
-                                        <p class="card-text">
+                                        <h5 class="card-title accordion-image-title">Inti Raymi</h5>
+                                        <p class="card-text accordion-image-text">
                                             El Inti Raymi muestra el sincretismo de la cultura andina y occidental, y el Aya Uma
                                             es un ejemplo de ello.
                                         </p>
@@ -335,8 +338,8 @@
                                 <div class="card text-center ">
                                     <img src="assets/imgSierra/Diablada de pillaro.jpg" class="card-img-top accordion-image" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Diablada de pillaro</h5>
-                                        <p class="card-text">
+                                        <h5 class="card-title accordion-image-title">Diablada de pillaro</h5>
+                                        <p class="card-text accordion-image-text">
                                             Los diablos bofean en las calles de Píllaro al ritmo de pasacalles y pasillos que
                                             entonan las bandas de pueblo
                                         </p>
@@ -344,6 +347,7 @@
                                 </div>
                             </div>
                             
+
                         </div>
                     </div>
                     <!-- *************** AQUI FINALIZA EL CÓDIGO DE CADA REGIÓN ****************** -->
