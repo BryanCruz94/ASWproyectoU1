@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
@@ -96,6 +100,25 @@
     </style>
 
 
+<script>
+    $(document).ready(function () {
+        // Ocultar el texto de las tarjetas al iniciar la página
+        $("#portadaCosta").hide();
+        $("#portadaCosta").fadeIn(2500);
+        
+        $(".card-text").hide();
+
+        $(".card").hover(
+            function () {
+                $(this).find(".card-text").slideDown(); // Mostrar el texto al pasar el cursor
+            },
+            function () {
+                $(this).find(".card-text").slideUp(); // Ocultar el texto al quitar el cursor
+            }
+        );
+    });
+</script>
+
 </head>
 
 <body>
@@ -177,12 +200,12 @@
                     <div class="container">
                         <div class="row">
                             <div class="m-1 text-center">
-                                <img src="imgCosta/bannerCosta.jpg" alt="" class="img-fluid">
+                                <img src="imgCosta/bannerCosta.jpg" alt="" class="img-fluid" id="portadaCosta">
                             </div>
                             <hr>
                             <hr>
                             <!-- *************** PEQUEÑA RESEÑA DE LA REGIÓN COSTA ****************** -->
-                            <div class="parrafo1 col-lg-6">
+                            <div class="parrafo1 col-lg-6" >
                                 <p> Bañadas por las aguas del Océano Pacífico y con un clima cálido tropical, durante
                                     todo el año, la
                                     Costa permite a los viajeros vivir emocionantes aventuras. Montañita, es conocida
