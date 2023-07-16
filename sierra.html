@@ -80,6 +80,9 @@
     <script>
         $(document).ready(function () {
             // Ocultar el texto de las tarjetas al iniciar la página
+            $("#portadaSierra").hide();
+            $("#portadaSierra").fadeIn(2500);
+            
             $(".card-text").hide();
 
             $(".card").hover(
@@ -92,13 +95,7 @@
             );
         });
 
-        $(document).ready(function () {
-            
-            $("#btnSierra").click(function (event) {
-                event.preventDefault();
-                $("#portadaSierra").fadeIn();
-            });
-        });
+       
     </script>
 
 </head>
