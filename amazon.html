@@ -7,8 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
     <title>ECUA-TRAVELS</title>
     <style>
@@ -63,6 +71,59 @@
         }
     </style>
 
+    <script>
+        $(document).ready(function () {
+            // Ocultar el texto de las tarjetas al iniciar la página
+            $("#PortadaAmazonia").hide();
+            $("#PortadaAmazonia").fadeIn(4500);
+
+            //
+
+
+            //oculta el texto de la car-text
+            $(".card-text").hide();
+
+
+            // Mostrar el texto al pasar el cursor
+            $(".card").hover(
+                function () {
+                    $(this).find(".card-text").slideDown();
+                },
+
+                // Ocultar el texto al quitar el cursor
+               // function () {
+                //    $(this).find(".card-text").slideUp();
+                //}
+            );
+
+            //cambiar imagen aventura y deportes
+            $("#imgAventura").click(
+                function () {
+                    $("#imgAventura").attr("src", "assets/imgAmazon/mix2.jpg");
+                }
+            );
+
+            //cambiar imagen gastronomía
+            $("#imgGastronomia").click(
+                function () {
+                    $("#imgGastronomia").attr("src", "assets/imgAmazon/gastronomia2.jpg");
+                }
+            );
+
+            $("#imgCultura").click(
+                function () {
+                    $("#imgCultura").attr("src", "assets/imgAmazon/culturaCamb.jpg");
+                }
+            );
+
+        });
+
+
+
+
+    </script>
+
+
 </head>
 
 <body>
@@ -104,7 +165,7 @@
             </header>
             <div class="container">
 
-   
+
                 <nav class=" navbar-expand-lg navbar-light bg-light">
 
                     <ul class="nav navbar-nav  justify-content-center text-center">
@@ -145,14 +206,15 @@
 
                     <h2 style="padding: 20px 0px 0px;" class="text-center  font-weight-bold">AMAZONÍA ECUATORIANA</h2>
 
-                    <div class="col-12 text-center col-md-12 col-sm-12" >
-                        <img src="assets/imgAmazon/img.jpeg" class="img-rounded img-fluid" alt="imagen publicidad">
+                    <div class="col-12 text-center col-md-12 col-sm-12">
+                        <img src="assets/imgAmazon/img.jpeg" class="img-rounded img-fluid" alt="imagen publicidad"
+                            id="PortadaAmazonia">
                     </div>
                     <br>
                     <p>
-                        Cada 12 de febrero, en Ecuador  rendimos homenaje a la región más grande y natural de nuestro
+                        Cada 12 de febrero, en Ecuador rendimos homenaje a la región más grande y natural de nuestro
                         país: la Amazonía.
-                        Este paraíso verde nos invita a descubrir  un mundo de diversidad infinita, partiendo desde
+                        Este paraíso verde nos invita a descubrir un mundo de diversidad infinita, partiendo desde
                         sus
                         habitantes –integrantes de pueblos indígenas ancestrales–,
                         pasando por su rica flora, fauna, ríos, paisajes, gastronomía y variedad de actividades para
@@ -186,7 +248,8 @@
                                             style=" height: 100%;">
 
                                             <div class="col">
-                                                <img src="assets/imgAmazon/aventura.jpg" class="card-img " alt="..." />
+                                                <img src="assets/imgAmazon/aventura.jpg" class="card-img " alt="..."
+                                                    id="imgAventura" />
                                             </div>
                                         </div>
 
@@ -286,14 +349,24 @@
                             <div class="col-lg-8 col-md-8 col-sm-12">
                                 <div class="d-flex align-items-center h-100">
                                     <p class="card-text m-auto" style="text-align: justify; padding: 20px;">
-                                        Por la conservación de sus saberes ancestrales, la gastronomía amazónica es una de las menos intervenidas de Latinoamérica. En sus destinos es posible encontrarse con exquisitas y exóticas preparaciones como los pinchos de gusanos (mayores), los destacados maitos de pescado o ricas bebidas como la chicha de chonta, yuca o guayusa. Según el Mapa Gastronómica del país, en las provincias amazónicas se destacan otros platos como: casabe de yuca y sinchicara, en Sucumbíos; uchumanka y jugo de cocona, en Orellana; maito de filete de pescado y té de guayusa, en Napo; maito de pescado y té de guayusa, en Pastaza; ayampaco y chuchuguaso, en Morona Santiago; y caldo de corroncho y licor sietepingas, en Zamora Chinchipe. Los platos típicos se pueden degustar desde los $5,00.
+                                        Por la conservación de sus saberes ancestrales, la gastronomía amazónica es una
+                                        de las menos intervenidas de Latinoamérica. En sus destinos es posible
+                                        encontrarse con exquisitas y exóticas preparaciones como los pinchos de gusanos
+                                        (mayores), los destacados maitos de pescado o ricas bebidas como la chicha de
+                                        chonta, yuca o guayusa. Según el Mapa Gastronómica del país, en las provincias
+                                        amazónicas se destacan otros platos como: casabe de yuca y sinchicara, en
+                                        Sucumbíos; uchumanka y jugo de cocona, en Orellana; maito de filete de pescado y
+                                        té de guayusa, en Napo; maito de pescado y té de guayusa, en Pastaza; ayampaco y
+                                        chuchuguaso, en Morona Santiago; y caldo de corroncho y licor sietepingas, en
+                                        Zamora Chinchipe. Los platos típicos se pueden degustar desde los $5,00.
                                     </p>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-12">
                                 <div class="row justify-content-center align-items-center pl-1 h-100">
                                     <div class="col">
-                                        <img src="assets/imgAmazon/maito-amazonia-ecuatoriana.jpeg" class="card-img" alt="..." />
+                                        <img src="assets/imgAmazon/maito-amazonia-ecuatoriana.jpeg" class="card-img"
+                                            alt="..." id="imgGastronomia" />
                                     </div>
                                 </div>
                             </div>
@@ -301,7 +374,7 @@
                     </div>
                 </div>
             </div>
-            
+
 
         </div>
         <!-- ............... -->
@@ -370,7 +443,7 @@
                             <div class="row justify-content-center align-items-center pl-1" style=" height: 100%;">
 
                                 <div class="col">
-                                    <img src="assets/imgAmazon/cultura.jpg" class="card-img " alt="..." />
+                                    <img src="assets/imgAmazon/cultura.jpg" class="card-img " alt="..." id="imgCultura" />
                                 </div>
                             </div>
 
@@ -382,11 +455,14 @@
                                     provincias, cada uno con diferentes costumbres ancestrales, que mediante los
                                     emprendimientos y Centros de Turismo Comunitario comparten con los visitantes.
                                     En la actualidad, muchos de estos pueblos mantienen prácticas como la recolección de
-                                    frutos,pesca, caza, danza, shamanismo, gastronomía y medicina natural. Los costos para
-                                    presenciar estas experiencias varían según la provincia, la nacionalidad y actividades
-                                    que se practiquen. En El Coca, se puede visitar emprendimientos turísticos por un valor
+                                    frutos,pesca, caza, danza, shamanismo, gastronomía y medicina natural. Los costos
+                                    para
+                                    presenciar estas experiencias varían según la provincia, la nacionalidad y
+                                    actividades
+                                    que se practiquen. En El Coca, se puede visitar emprendimientos turísticos por un
+                                    valor
                                     que va desde los $25,00 por persona, en grupos mínimos de 6 personas.
-                                    </p>
+                                </p>
                             </div>
 
                         </div>
