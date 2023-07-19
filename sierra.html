@@ -10,6 +10,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
+    <script src="assets/js/script_Menu.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -18,10 +20,40 @@
 
     <title>ECUA-TRAVELS</title>
     <style>
-        * {
-            /* border: 1px solid; */
+       /* ESTILOS PARA MENÚ DESLIZANTE */
+
+       #menu{
+            width: 180px;
+            background-color: rgb(46, 48, 49);
+            color:white;
+            border: 3px solid whitesmoke;
+            border-radius: 20px;
+            padding: 20px 20px 0 20px;
+            position: fixed;
+            z-index: 100;
+            left: -150px;
+            top: 180px;
         }
 
+        #menu>div{
+            font:bold;
+            margin-bottom: 40px;
+            transition: all 0.3s;
+            
+        }
+
+        #menu>div a{
+            color: inherit;
+            text-decoration: none;
+        }
+
+        #menu>div:hover{
+            font-size: 50;
+            transform: scale(1.2);
+        }
+
+        /* FIN ESTILOS PARA MENÚ DESLIZANTE */
+       
         .logo {
             transition: all 0.3s ease-in-out;
         }
@@ -85,6 +117,7 @@
             // Ocultar el texto de las tarjetas al iniciar la página
             $("#portadaSierra").hide();
             $("#portadaSierra").fadeIn(2500);
+            $('#tituloSierra').animate({ fontSize: '58px', color: 'green' }, 2000);
 
             $(".card-text").hide();
 
@@ -141,6 +174,19 @@
                 <div class="col-1"></div>
 
             </header>
+
+            <!-- EMPIEZA MENÚ DESPLEGABLE -->
+            <div id="menu">
+                <div > <a href="#lugTuristicos"> <h6 class="text-center">LUGARES TURÍSTICOS</h6></a> </div>
+                <div > <a href="#gastronomia"> <h6 class="text-center">GASTRONOMÍA</h6> </a></div>
+                <div > <a href="#culturas"> <h6 class="text-center">CULTURAS</h6></a></div>
+                <div > <a href="#costTradiciones"> <h6 class="text-center">COSTUMBRES Y TRADICIONES</h6></a> </div>
+            </div>
+        
+
+            <!-- TERMINA MENPU DESPLEGABLE -->
+
+
             <div class="container">
 
                 <nav class=" navbar-expand-lg navbar-light bg-light">
@@ -181,11 +227,14 @@
 
                 <main>
                     <!-- *************** A PARTIR DE AQUÍ VA EL CÓDIGO DE CADA REGIÓN ****************** -->
+                    <h2 id="tituloSierra"
+                        style="padding: 20px 0px 0px; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif "
+                        class="animated-tittle">SIERRA ECUATORIANA</h2>
                     <div class="m-2 text-center">
                         <img src="assets/imgSierra/bannerSierra.jpg" alt="" class="img-fluid" id="portadaSierra">
                     </div>
                     <center>
-                        <h1>Lugares Turísticos</h1>
+                        <h1 id="lugTuristicos">Lugares Turísticos</h1>
                     </center>
                     <div class="row mt-4 mb-3">
                         <div class="col-sm-12 col-lg-6">
@@ -264,7 +313,7 @@
                         </div>
                     </div>
                     <center>
-                        <h1>Gastronomía</h1>
+                        <h1 id="gastronomia">Gastronomía</h1>
                     </center>
                     <div class="row mt-4 mb-3">
                         <div class="text-justify">
@@ -302,7 +351,7 @@
                         </div>
                     </div>
                     <center>
-                        <h1>Culturas</h1>
+                        <h1 id="culturas">Culturas</h1>
                     </center>
                     <div class="row mt-4 mb-3">
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -333,7 +382,7 @@
 
                         </div>
 
-                        <h3>Costumbres y tradiciones</h3>
+                        <h3 id="costTradiciones">Costumbres y tradiciones</h3>
 
                         <div class="row">
                             <div class="col-md-4" style="padding: 20px">
@@ -389,50 +438,26 @@
             <footer class="row justify-content-center ml-3 mr-3 mt-4"
                 style="border-top:3px solid; background-color: rgb(46, 48, 49); color:white">
 
+                <!-- AQUI EMPIEZA LOGOS -->
                 <div class="col-lg-4 col-md-8 col-sm-11 order-lg-1 order-md-2 order-sm-2 align-self-center">
-                    <h5 class="text-center m-2">DÉJANOS TUS COMENTARIOS</h5>
-                    <form action="#" id="formulario" class="border rounded p-4" style="background-color: #c3dccb91;">
-                        <!-- fila de datos -->
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="form-group">
-                                    <label for="nombre">Nombre y Apellido: </label>
-                                    <input type="text" class="form-control" placeholder="Nombre y Apellido"
-                                        name="nombre" id="nombre">
-                                </div>
-                                <div class="form-group">
-                                    <label for="nombre">Correo Electrónico: </label>
-                                    <input type="text" class="form-control" placeholder="@espe.edu.ec" name="nombre"
-                                        id="nombre">
-                                </div>
-                                <div class="form-group">
-                                    <label for="mensaje">Mensaje: </label>
-                                    <textarea name="mensaje" id="mensaje" cols="30" rows="3" class="form-control">
-                                    </textarea>
-                                </div>
-                            </div>
+                    <a href="index.html"><img class="img-fluid" src="assets/imgIndex/LOGO_FOOTER.jpg"
+                            alt="logo Imagen"></a>
+                    <center>
+                        <div class="">
+                            <a href="#"> <img class="logo " style="margin: 20px;"
+                                    src="assets/imgIndex/logotipo-de-instagram_f.png" width="32px" alt=""></a>
+                            <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/facebook_f.png"
+                                    width="32px" alt=""></a>
 
+                            <a href="#"> <img class="logo " style="margin: 20px;"
+                                    src="assets/imgIndex/correo-electronico-vacio_f.png" width="35px" alt=""></a>
 
                         </div>
-                        <!-- fila de condiciones -->
-                        <div class="row justify-content-center">
-                            <div class="col text-center">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" name="terminos" id="terminos"
-                                            class="form-check-label mr-2">Acepto recibir correos
-                                        informativos</label>
-                                </div>
-                            </div>
-                        </div>
+                    </center>
 
-                        <!-- fila de boton -->
-                        <div class="row justify-content-center mt-2">
-                            <button class="col-lg-5 col-md-11 col-sm-11 col-xm-11 btn btn-primary"
-                                type="submit">Enviar</button>
-                        </div>
-                    </form>
                 </div>
+
+                <!-- AQUI EMPIEZA CONTACTENOS -->
                 <div class="col-lg-4 col-md-8 col-sm-11 order-lg-2 order-md-1 order-sm-1  align-self-center">
                     <h5 class="text-center m-4">CONTÁCTANOS</h5>
                     <p class="text-center">
@@ -443,6 +468,8 @@
                     </p>
 
                 </div>
+
+                <!-- AQUI EMPIEZA ENCUENTRANOS -->
                 <div class="col-lg-4 col-md-8 col-sm-11 order-lg-3 order-md-3 order-sm-3 align-self-center">
                     <h5 class="text-center mt-3">ENCUÉNTRANOS</h5>
                     <iframe class="border"
@@ -451,7 +478,6 @@
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </footer>
-
         </div>
     </div>
 

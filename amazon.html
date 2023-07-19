@@ -18,11 +18,44 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
+    <script src="assets/js/script_Menu.js"></script>
+
     <title>ECUA-TRAVELS</title>
     <style>
-        * {
-            /* border: 1px solid; */
+       /* ESTILOS PARA MENÚ DESLIZANTE */
+
+       #menu{
+            width: 180px;
+            background-color: rgb(46, 48, 49);
+            color:white;
+            border: 3px solid whitesmoke;
+            border-radius: 20px;
+            padding: 20px 20px 0 20px;
+            position: fixed;
+            z-index: 100;
+            left: -150px;
+            top: 180px;
         }
+
+        #menu>div{
+            font:bold;
+            margin-bottom: 40px;
+            transition: all 0.3s;
+            
+        }
+
+        #menu>div a{
+            color: inherit;
+            text-decoration: none;
+        }
+
+        #menu>div:hover{
+            font-size: 50;
+            transform: scale(1.2);
+        }
+
+        /* FIN ESTILOS PARA MENÚ DESLIZANTE */
+       
 
         .logo {
             transition: all 0.3s ease-in-out;
@@ -79,7 +112,7 @@
 
         /* Estilo al hacer hover en los títulos */
         .custom-title:hover {
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             /* Cambia esta fuente al deseado */
             color: #1b801b;
             /* Cambia este color al deseado */
@@ -87,7 +120,7 @@
 
         #animated-border:before {
             content: "";
-            position:absolute;
+            position: absolute;
             top: 0px;
             left: 20px;
             width: 100%;
@@ -95,12 +128,12 @@
             border: 8px solid transparent;
             box-sizing: border-box;
             transition: border-color 0.10s ease;
-          }
-        /* Cambia este color al deseado */
-          #animated-border:hover:before {
-            border-color: #25e64f; 
-          }
+        }
 
+        /* Cambia este color al deseado */
+        #animated-border:hover:before {
+            border-color: #25e64f;
+        }
     </style>
 
     <script>
@@ -138,13 +171,13 @@
             );
 
             //cambiar imagen gastronomía
-            $("#imgGastronomia").click(
+            $("#imgGastronomia").dblclick(
                 function () {
                     $("#imgGastronomia").attr("src", "assets/imgAmazon/gastronomia2.jpg");
                 }
             );
 
-            $("#imgCultura").click(
+            $("#imgCultura").hover(
                 function () {
                     $("#imgCultura").attr("src", "assets/imgAmazon/culturaCamb.jpg");
                 }
@@ -154,7 +187,11 @@
             // Agregar clase inicial a los títulos
             $('h3').addClass('custom-title');
 
-
+            // Al hacer clic en el botón, ocultar el botón y mostrar el contenido
+            $('#myButton').on('click', function () {
+                $(this).hide();
+                $('#myContent').show();
+            });
 
         });
     </script>
@@ -199,6 +236,17 @@
                 <div class="col-1"></div>
 
             </header>
+
+            <!-- EMPIEZA MENÚ DESPLEGABLE -->
+            <div id="menu">
+                <div > <a href="#tituloAv"> <h6 class="text-center">AVENTURA Y NATURZALEZA</h6></a> </div>
+                <div > <a href="#gastronomia"> <h6 class="text-center">GASTRONOMÍA</h6> </a></div>
+                <div > <a href="#cultura"> <h6 class="text-center">CULTURAS</h6></a></div>
+            </div>
+        
+
+            <!-- TERMINA MENPU DESPLEGABLE -->
+
             <div class="container">
 
 
@@ -248,8 +296,11 @@
                         <img src="assets/imgAmazon/img.jpeg" class="img-rounded img-fluid" alt="imagen publicidad"
                             id="PortadaAmazonia">
                     </div>
-                    <br>
-                    <p>
+                    <button class="btn btn-success" id="myButton" style="text-align: center; margin-top: 55px; margin-left: 500px; padding-bottom:10px">
+                        Conoce más de la historia amazónica..! Haz Click</button>
+
+                        <div id="myContent" style="display: none;">      
+                    <p style="padding-top: 10px; text-align:justify ">
                         Cada 12 de febrero, en Ecuador rendimos homenaje a la región más grande y natural de nuestro
                         país: la Amazonía.
                         Este paraíso verde nos invita a descubrir un mundo de diversidad infinita, partiendo desde
@@ -266,11 +317,12 @@
                         cada una de ellas con diferentes cualidades y atractivos turísticos, ideales para vivir
                         experiencias auténticas y reconectarse con la naturaleza.
                     </p>
+                </div>
 
                     <!-- PRIMERA PARTE  -->
                     <div class="row justify-content-end">
-                        <div class=" col-lg-4 col-md-12 col-sm-12">
-                            <h3 id="tituloAv" class="font-italic text-success" style="text-align: center;">
+                        <div class=" col-lg-4 col-md-12 col-sm-12" style="padding-top: 10px;">
+                            <h3 id="tituloAv" class="font-italic text-success" style="text-align: center; padding-top:15px;">
                                 AVENTURA Y NATURALEZA</h3>
                         </div>
                         <div class=" col-2"></div>
@@ -373,7 +425,7 @@
             <!-- Segunda parte -->
             <div class="row justify-content-start">
                 <div class=" col-lg-4 col-md-12 col-sm-12">
-                    <h3 class="font-italic text-primary" style="text-align: center;">
+                    <h3 class="font-italic text-primary" style="text-align: center;" id="gastronomia">
                         GASTRONOMÍA</h3>
                 </div>
                 <div class=" col-2"></div>
@@ -466,7 +518,7 @@
         <!-- tercera parte de las culturas  -->
         <div class="row justify-content-end">
             <div class=" col-lg-4 col-md-12 col-sm-12">
-                <h3 class="font-italic text-danger" style="text-align: center;">
+                <h3 class="font-italic text-danger" style="text-align: center;" id="cultura">
                     CULTURAS</h3>
             </div>
             <div class=" col-2"></div>
@@ -481,7 +533,7 @@
                             <div class="row justify-content-center align-items-center pl-1" style=" height: 100%;">
 
                                 <div class="col">
-                                    <img src="assets/imgAmazon/cultura.jpg" class="card-img " alt="..."
+                                    <img src="assets/imgAmazon/ii.jpg" class="card-img " alt="..."
                                         id="imgCultura" />
                                 </div>
                             </div>
@@ -572,50 +624,27 @@
 
     <footer class="row justify-content-center ml-3 mr-3 mt-4"
         style="border-top:3px solid; background-color: rgb(46, 48, 49); color:white">
-        <div class="col-lg-4 col-md-8 col-sm-11 order-md-2 order-sm-2 align-self-center">
-            <h5 class="text-center m-2">DÉJANOS TUS COMENTARIOS</h5>
-            <form action="#" id="formulario" class="border rounded p-4" style="background-color: #c3dccb91;">
-                <!-- fila de datos -->
-                <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <div class="form-group">
-                            <label for="nombre">Nombre y Apellido: </label>
-                            <input type="text" class="form-control" placeholder="Nombre y Apellido" name="nombre"
-                                id="nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="nombre">Correo Electrónico: </label>
-                            <input type="text" class="form-control" placeholder="@espe.edu.ec" name="nombre"
-                                id="nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje: </label>
-                            <textarea name="mensaje" id="mensaje" cols="30" rows="3" class="form-control">
-                                        </textarea>
-                        </div>
-                    </div>
 
+        <!-- AQUI EMPIEZA LOGOS -->
+        <div class="col-lg-4 col-md-8 col-sm-11 order-lg-1 order-md-2 order-sm-2 align-self-center">
+            <a href="index.html"><img class="img-fluid" src="assets/imgIndex/LOGO_FOOTER.jpg" alt="logo Imagen"></a>
+            <center>
+                <div class="">
+                    <a href="#"> <img class="logo " style="margin: 20px;"
+                            src="assets/imgIndex/logotipo-de-instagram_f.png" width="32px" alt=""></a>
+                    <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/facebook_f.png"
+                            width="32px" alt=""></a>
+
+                    <a href="#"> <img class="logo " style="margin: 20px;"
+                            src="assets/imgIndex/correo-electronico-vacio_f.png" width="35px" alt=""></a>
 
                 </div>
-                <!-- fila de condiciones -->
-                <div class="row justify-content-center">
-                    <div class="col text-center">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="checkbox" name="terminos" id="terminos"
-                                    class="form-check-label mr-2">Acepto recibir correos
-                                informativos</label>
-                        </div>
-                    </div>
-                </div>
+            </center>
 
-                <!-- fila de boton -->
-                <div class="row justify-content-center mt-2">
-                    <button class="col-lg-5 col-md-11 col-sm-11 col-xm-11 btn btn-primary" type="submit">Enviar</button>
-                </div>
-            </form>
         </div>
-        <div class="col-lg-4 col-md-8 col-sm-11 order-md-1 order-sm-1  align-self-center">
+
+        <!-- AQUI EMPIEZA CONTACTENOS -->
+        <div class="col-lg-4 col-md-8 col-sm-11 order-lg-2 order-md-1 order-sm-1  align-self-center">
             <h5 class="text-center m-4">CONTÁCTANOS</h5>
             <p class="text-center">
                 Av. Amazonas N34-451 y Av. Atahualpa <br>
@@ -625,7 +654,9 @@
             </p>
 
         </div>
-        <div class="col-lg-4 col-md-8 col-sm-11 order-md-3 order-sm-3 align-self-center">
+
+        <!-- AQUI EMPIEZA ENCUENTRANOS -->
+        <div class="col-lg-4 col-md-8 col-sm-11 order-lg-3 order-md-3 order-sm-3 align-self-center">
             <h5 class="text-center mt-3">ENCUÉNTRANOS</h5>
             <iframe class="border"
                 src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d34061.39853387128!2d-78.49690433964722!3d-0.18395374830270877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMINISTERIO%20DE%20TURISMO!5e0!3m2!1ses!2sec!4v1685843890886!5m2!1ses!2sec"
