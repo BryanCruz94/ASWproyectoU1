@@ -154,7 +154,11 @@
             // Agregar clase inicial a los títulos
             $('h3').addClass('custom-title');
 
-
+          // Al hacer clic en el botón, ocultar el botón y mostrar el contenido
+          $('#myButton').on('click', function() {
+            $(this).hide();
+            $('#myContent').show();
+          });
 
         });
     </script>
@@ -248,7 +252,11 @@
                         <img src="assets/imgAmazon/img.jpeg" class="img-rounded img-fluid" alt="imagen publicidad"
                             id="PortadaAmazonia">
                     </div>
-                    <br>
+                    <button class="btn btn-success" id="myButton" style="text-align: center; margin-top: 300px; margin-left: 500px">
+                        Conoce más de la historia amazónica..! Haz Click</button>
+
+                        <div id="myContent" style="display: none;">
+                       
                     <p>
                         Cada 12 de febrero, en Ecuador rendimos homenaje a la región más grande y natural de nuestro
                         país: la Amazonía.
@@ -266,6 +274,7 @@
                         cada una de ellas con diferentes cualidades y atractivos turísticos, ideales para vivir
                         experiencias auténticas y reconectarse con la naturaleza.
                     </p>
+                </div>
 
                     <!-- PRIMERA PARTE  -->
                     <div class="row justify-content-end">
