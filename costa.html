@@ -151,6 +151,29 @@
             });
         });
 
+        //Animacion para los botones estilo acordeon
+        $(document).ready(function () {
+            // Obtener todos los botones del acordeón
+            var acc = document.getElementsByClassName("accordion");
+
+            // Agregar el evento de clic a cada botón del acordeón
+            for (var i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    /* Alternar entre agregar y quitar la clase "active" para activar el acordeón */
+                    this.classList.toggle("active");
+
+                    /* Obtener el contenido asociado con el botón actual */
+                    var panel = this.nextElementSibling;
+
+                    /* Si el contenido está abierto, ciérralo; si está cerrado, ábrelo */
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        });
     </script>
 
 </head>
@@ -347,26 +370,7 @@
                             <hr>
                             <br>
                             <script>
-                                // Obtener todos los botones del acordeón
-                                var acc = document.getElementsByClassName("accordion");
 
-                                // Agregar el evento de clic a cada botón del acordeón
-                                for (var i = 0; i < acc.length; i++) {
-                                    acc[i].addEventListener("click", function () {
-                                        /* Alternar entre agregar y quitar la clase "active" para activar el acordeón */
-                                        this.classList.toggle("active");
-
-                                        /* Obtener el contenido asociado con el botón actual */
-                                        var panel = this.nextElementSibling;
-
-                                        /* Si el contenido está abierto, ciérralo; si está cerrado, ábrelo */
-                                        if (panel.style.maxHeight) {
-                                            panel.style.maxHeight = null;
-                                        } else {
-                                            panel.style.maxHeight = panel.scrollHeight + "px";
-                                        }
-                                    });
-                                }
                             </script>
 
                             <!-- ** EXPLICACION DE LUGARES TURISTICOS *** -->
@@ -614,6 +618,8 @@
                                         puede degustar tanto en la zona costera como rural de la provincia de Manabí.
                                     </p>
                                 </div>
+
+
                             </div>
 
                             <hr>
@@ -710,15 +716,17 @@
 
                 <!-- AQUI EMPIEZA LOGOS -->
                 <div class="col-lg-4 col-md-8 col-sm-11 order-lg-1 order-md-2 order-sm-2 align-self-center">
-                    <a href="index.html"><img class="img-fluid" src="assets/imgIndex/LOGO_FOOTER.jpg" alt="logo Imagen"></a>
-                    
-                    <div class="">
-                        <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/logotipo-de-instagram_f.png" width="32px"
-                                alt=""></a>
-                        <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/facebook_f.png" width="32px" alt=""></a>
+                    <a href="index.html"><img class="img-fluid" src="assets/imgIndex/LOGO_FOOTER.jpg"
+                            alt="logo Imagen"></a>
 
-                        <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/correo-electronico-vacio_f.png"
-                            width="35px" alt=""></a>
+                    <div class="">
+                        <a href="#"> <img class="logo " style="margin: 20px;"
+                                src="assets/imgIndex/logotipo-de-instagram_f.png" width="32px" alt=""></a>
+                        <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/facebook_f.png"
+                                width="32px" alt=""></a>
+
+                        <a href="#"> <img class="logo " style="margin: 20px;"
+                                src="assets/imgIndex/correo-electronico-vacio_f.png" width="35px" alt=""></a>
 
                     </div>
 
