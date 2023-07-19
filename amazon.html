@@ -84,6 +84,23 @@
             color: #1b801b;
             /* Cambia este color al deseado */
         }
+
+        #animated-border:before {
+            content: "";
+            position:absolute;
+            top: 0px;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            border: 8px solid transparent;
+            box-sizing: border-box;
+            transition: border-color 0.10s ease;
+          }
+        /* Cambia este color al deseado */
+          #animated-border:hover:before {
+            border-color: #25e64f; 
+          }
+
     </style>
 
     <script>
@@ -92,7 +109,7 @@
             $("#PortadaAmazonia").hide();
             $("#PortadaAmazonia").fadeIn(4500);
 
-            $('#tituloAmaz').animate({ fontSize: '62px', color: 'green' }, 2000);
+            $('#tituloAmaz').animate({ fontSize: '58px', color: 'green' }, 2000);
 
             //
 
@@ -227,7 +244,7 @@
                         style="padding: 20px 0px 0px; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif "
                         class="animated-tittle">AMAZONÍA ECUATORIANA</h2>
 
-                    <div class="col-12 text-center col-md-12 col-sm-12">
+                    <div id="animated-border" class="col-12 text-center col-md-12 col-sm-12">
                         <img src="assets/imgAmazon/img.jpeg" class="img-rounded img-fluid" alt="imagen publicidad"
                             id="PortadaAmazonia">
                     </div>
