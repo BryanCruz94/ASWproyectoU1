@@ -26,10 +26,46 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+    <script src="assets/js/script_Menu.js"></script>
+
+
   <style>
-    * {
-      /* border: 1px solid; */
-    }
+   
+   /* ESTILOS PARA MENÚ DESLIZANTE */
+
+   #menu{
+            width: 180px;
+            background-color: rgb(46, 48, 49);
+            color:white;
+            border: 3px solid whitesmoke;
+            border-radius: 20px;
+            padding: 20px 20px 0 20px;
+            position: fixed;
+            z-index: 100;
+            left: -150px;
+            top: 180px;
+        }
+
+        #menu>div{
+            font:bold;
+            margin-bottom: 40px;
+            transition: all 0.3s;
+            
+        }
+
+        #menu>div a{
+            color: inherit;
+            text-decoration: none;
+        }
+
+        #menu>div:hover{
+            font-size: 50;
+            transform: scale(1.2);
+        }
+
+        /* FIN ESTILOS PARA MENÚ DESLIZANTE */
+       
 
     .logo {
       transition: all 0.3s ease-in-out;
@@ -99,7 +135,7 @@
 
     .accordion .card-header {
       background-color: #ffffff;
-      border-bottom: 1px solid #black;
+      border-bottom: 1px solid black;
       padding: 15px;
       position: relative;
     }
@@ -296,6 +332,12 @@
         <div class="col-1"></div>
 
       </header>
+
+      
+
+
+    <!-- TERMINA MENPU DESPLEGABLE -->
+
       <div class="container">
 
         <nav class=" navbar-expand-lg navbar-light bg-light">

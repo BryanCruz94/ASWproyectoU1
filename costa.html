@@ -13,12 +13,48 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/script_Menu.js"></script>
 
 
 
     <title>ECUA-TRAVELS</title>
 
     <style>
+        /* ESTILOS PARA MENÚ DESLIZANTE */
+
+       #menu{
+            width: 180px;
+            background-color: rgb(46, 48, 49);
+            color:white;
+            border: 3px solid whitesmoke;
+            border-radius: 20px;
+            padding: 20px 20px 0 20px;
+            position: fixed;
+            z-index: 100;
+            left: -150px;
+            top: 180px;
+        }
+
+        #menu>div{
+            font:bold;
+            margin-bottom: 40px;
+            transition: all 0.3s;
+            
+        }
+
+        #menu>div a{
+            color: inherit;
+            text-decoration: none;
+        }
+
+        #menu>div:hover{
+            font-size: 50;
+            transform: scale(1.2);
+        }
+
+        /* FIN MENU DESLIZANTE */
+        
+
         .logo {
             transition: all 0.2s ease-in-out;
         }
@@ -196,6 +232,18 @@
                 <div class="col-1"></div>
 
             </header>
+
+<!-- EMPIEZA MENÚ DESPLEGABLE -->
+<div id="menu">
+    <div > <a href="#resumen"> <h6 class="text-center">RESÚMEN</h6></a> </div>
+    <div > <a href="#lugTuristico"> <h6 class="text-center">LUGARES TURÍSTICOS</h6> </a></div>
+    <div > <a href="#gastronomia"> <h6 class="text-center">GASTRONOMÍA</h6></a></div>
+    <div > <a href="#tradiciones"> <h6 class="text-center">TRADICIONES</h6></a> </div>
+</div>
+
+
+<!-- TERMINA MENPU DESPLEGABLE -->
+
             <div class="container">
 
                 <nav class=" navbar-expand-lg navbar-light bg-light">
@@ -243,7 +291,7 @@
                             <hr>
                             <hr>
                             <!-- ** PEQUEÑA RESEÑA DE LA REGIÓN COSTA *** -->
-                            <div class="parrafo1 col-lg-6">
+                            <div id="resumen" class="parrafo1 col-lg-6">
                                 <p> Bañadas por las aguas del Océano Pacífico y con un clima cálido tropical, durante
                                     todo el año, la
                                     Costa permite a los viajeros vivir emocionantes aventuras. Montañita, es conocida
@@ -375,7 +423,7 @@
 
                             <!-- ** EXPLICACION DE LUGARES TURISTICOS *** -->
                             <div class="explicacionTuristico col-lg-12">
-                                <h2>LUGARES TURISTICOS</h2>
+                                <h2 id="lugTuristico">LUGARES TURISTICOS</h2>
                                 <br>
                                 <div class="row ">
                                     <br>
@@ -491,7 +539,7 @@
 
                             <!-- ** EXPLICACION GASTRONOMICA *** -->
                             <div class="explicacionGastronomia">
-                                <h4>Gastronomía</h4>
+                                <h4 id="gastronomia">Gastronomía</h4>
                                 <div class=" explicacionGastronomia col-lg-12">
                                     <br>
                                     <img src="imgCosta/Encocado.jpg" class="rounded float-left" alt="..." height="200px"
@@ -624,7 +672,7 @@
                             <!-- ** EXPLICACION Tradiciones *** -->
                             <div class="explicacionTradiciones">
                                 <div class="row col-lg-12">
-                                    <h4>Tradiciones</h4>
+                                    <h4 id="tradiciones">Tradiciones</h4>
                                     <br>
                                     <br>
 
