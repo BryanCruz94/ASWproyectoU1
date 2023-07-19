@@ -165,6 +165,19 @@
       margin-left: 0px;
       margin-right: auto;
     }
+
+    .accordion-image {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .accordion-image:hover {
+            transform: scale(1.1);
+        }
+
+        .card-title{
+          text-align: center;
+        }
+
   </style>
 
   <script>
@@ -192,7 +205,9 @@
         walkingGif.style.display = "none";
       };
 
-      $(".card-text").hide();
+
+      
+      $(".ctex").hide();
 
       $(".card").hover(
         function () {
@@ -212,7 +227,8 @@
 
       $("#ceviche").hide();
       $('#imgcevi').click(function () {
-        $(this).attr("class", "card-img-top nuevocev").show("#ceviche");
+        $(this).attr("class", "card-img-top nuevocev");
+        $("#ceviche").fadeIn(1000);
       });
 
     });
@@ -233,7 +249,10 @@
         $(this).prev('.card-header').find('.btn').attr('aria-expanded', false);
       });
 
-
+      $('#myButton').on('click', function() {
+            $(this).hide();
+            $('.myContent').fadeIn(1000);
+          });
     });
 
 
@@ -349,7 +368,7 @@
                                     style="height: 260px;" class="card-img-top" alt="" />
                                   <div class="card-body">
                                     <h5 class="card-title">Arroz Marinero</h5>
-                                    <p class="card-text" style="text-align: justify;" id="marinero">
+                                    <p class="card-text ctex" style="text-align: justify;" id="marinero">
                                       Tal y como su propio nombre indica, el principal ingrediente es el arroz, al cual
                                       se le
                                       añaden
@@ -367,7 +386,7 @@
                                     alt="..." id="image-1" />
                                   <div class="card-body">
                                     <h5 class="card-title">Bacalao con papas</h5>
-                                    <p class="card-text" style="text-align: justify;">
+                                    <p class="card-text ctex" style="text-align: justify;" id="marinero">
                                       Este plato tan tradicional de las islas Galápagos son simples: bacalao y patatas.
                                       Aparte
                                       de eso,
@@ -388,7 +407,7 @@
                                     alt="..." />
                                   <div class="card-body">
                                     <h5 class="card-title">Ceviche de canchalagua</h5>
-                                    <p class="card-text" style="text-align: justify;">
+                                    <p class="card-text ctex" style="text-align: justify;" id="marinero">
                                       La textura de la canchalagua es dura, similar a la del pulpo, pero su sabor es
                                       parecido
                                       al de
@@ -413,7 +432,7 @@
                                     <div class="col-lg-8 col-md-12 col-xs-12" id="ceviche">
                                       <div class="card-body">
                                         <h5 class="card-title">Ceviche de canchalagua</h5>
-                                        <p class="card-text" style="text-align: justify;">
+                                        <p class="card-text " style="text-align: justify;">
                                           La textura de la canchalagua es dura, similar a la del pulpo, pero su sabor es
                                           parecido al de las almejas o conchas. Para la elaboración de este plato, se
                                           emplean
@@ -457,10 +476,10 @@
                             <div class="row">
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/garrapatero.png" class="card-img-top"
+                                  <img src="assets/imgGalapagos/garrapatero.png " class="card-img-top accordion-image"
                                     alt="El Garrapatero">
                                   <div class="card-body">
-                                    <h5 class="card-title">El Garrapatero</h5>
+                                    <h5 class="card-title" s>El Garrapatero</h5>
                                     <p class="card-text">El Garrapatero se encuentra en la costa sureste de la Isla
                                       Santa
                                       Cruz, en las
@@ -482,7 +501,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/centro.jpeg" class="card-img-top"
+                                  <img src="assets/imgGalapagos/centro.jpeg" class="card-img-top accordion-image"
                                     alt="Centro de Crianza Fausto Llerena">
                                   <div class="card-body">
                                     <h5 class="card-title">Centro de Crianza Fausto Llerena</h5>
@@ -503,7 +522,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/tortuga.png" class="card-img-top" alt="Tortuga Bay">
+                                  <img src="assets/imgGalapagos/tortuga.png" class="card-img-top accordion-image" alt="Tortuga Bay">
                                   <div class="card-body">
                                     <h5 class="card-title">Tortuga Bay</h5>
                                     <p class="card-text">Bahía Tortuga es una hermosa playa de arena blanca, ubicada en
@@ -520,7 +539,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/laguna.jpg" class="card-img-top"
+                                  <img src="assets/imgGalapagos/laguna.jpg" class="card-img-top accordion-image"
                                     alt="LAGUNA LAS NINFAS">
                                   <div class="card-body">
                                     <h5 class="card-title">LAGUNA LAS NINFAS</h5>
@@ -545,7 +564,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/volcan.jpg" class="card-img-top"
+                                  <img src="assets/imgGalapagos/volcan.jpg" class="card-img-top accordion-image"
                                     alt="VOLCÁN SIERRA NEGRA">
                                   <div class="card-body">
                                     <h5 class="card-title">VOLCÁN SIERRA NEGRA</h5>
@@ -568,7 +587,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/tintoreras.jpeg" class="card-img-top"
+                                  <img src="assets/imgGalapagos/tintoreras.jpeg" class="card-img-top accordion-image"
                                     alt="LAS TINTORERAS">
                                   <div class="card-body">
                                     <h5 class="card-title">LAS TINTORERAS</h5>
@@ -595,7 +614,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/ratonera.png" class="card-img-top" alt="LA RATONERA">
+                                  <img src="assets/imgGalapagos/ratonera.png" class="card-img-top accordion-image" alt="LA RATONERA">
                                   <div class="card-body">
                                     <h5 class="card-title">LA RATONERA</h5>
                                     <p class="card-text">La Ratonera, ubicada en Santa Cruz, Galápagos, está localizada
@@ -614,7 +633,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/gemelos.jpg" class="card-img-top" alt="LOS GEMELOS">
+                                  <img src="assets/imgGalapagos/gemelos.jpg" class="card-img-top accordion-image" alt="LOS GEMELOS">
                                   <div class="card-body">
                                     <h5 class="card-title">LOS GEMELOS</h5>
                                     <p class="card-text">
@@ -633,7 +652,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/playa.png" class="card-img-top"
+                                  <img src="assets/imgGalapagos/playa.png" class="card-img-top accordion-image"
                                     alt="PLAYA DE LA ESTACIÓN">
                                   <div class="card-body">
                                     <h5 class="card-title">PLAYA DE LA ESTACIÓN</h5>
@@ -706,6 +725,7 @@
                                   <div class="tradicion">
                                     <img src="assets/imgGalapagos/baile.png" width="500px" height="300px"
                                       alt="Imagen del baile ">
+                                      <div class="myContent" style="display: none;">
                                     <h3>12 de febrero, el Día de Galápagos provincialización </h3>
                                     <p>El 12 de febrero de todos los años se conmemora el día de las Islas Galápagos, la
                                       celebración se realiza en los cantones de Santa Cruz y San Cristóbal donde los
@@ -713,12 +733,15 @@
                                       cívicos, pregón con carros alegóricos, comparsas, competencias náuticas, ciclismo
                                       y
                                       programas artísticos.
+                                    </div>
                                   </div>
+                  
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                   <div class="tradicion">
                                     <img src="assets/imgGalapagos/Agueda.jpg" width="500px" height="300px"
                                       alt="Imagen de la virgen del Agueda">
+                                      <div class="myContent" style="display: none;">
                                     <h2>Las Fiestas de Santa Agueda</h2>
                                     <p> tienen su comienzo con el encendido de la hoguera en honor Santa Agueda la noche
                                       anterior a su día. En este día se consume vino dulce y los tradicionales bollos a
@@ -726,9 +749,11 @@
                                       Santa
                                       Aguedilla. Se realizan misas, procesiones y paradas de fe en las cuales se reparte
                                       comida a los feligreses.</p>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
+                              <h3 class="btn" id="myButton" style="margin-left: 420px; background: rgb(148, 241, 252);">Mostrar contenido</h3>
                             </div>
 
 
