@@ -253,6 +253,8 @@
             $(this).hide();
             $('.myContent').fadeIn(1000);
           });
+
+          $('#tituloAmaz').animate({ fontSize: '58px', color: 'green' }, 2000);
     });
 
 
@@ -334,7 +336,9 @@
 
 
         <main>
-          <h2 style="padding: 20px 0px 0px; text-align: center;" class="font-weight-bold">GALÁPAGOS</h2>
+          <h2 id="tituloAmaz"
+          style="padding: 20px 0 0 0 ; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif "
+          class="animated-tittle">GALÁPAGOS</h2>
           <img id="walking-gif" src="assets/imgGalapagos/trutr.gif">
 
           <div class="m-2 text-center">
