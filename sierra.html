@@ -27,6 +27,7 @@
             background-color: rgb(46, 48, 49);
             color:white;
             border: 3px solid whitesmoke;
+            border-radius: 20px;
             padding: 20px 20px 0 20px;
             position: fixed;
             z-index: 100;
@@ -52,6 +53,7 @@
         }
 
         /* FIN ESTILOS PARA MENÚ DESLIZANTE */
+       
         .logo {
             transition: all 0.3s ease-in-out;
         }
@@ -115,6 +117,7 @@
             // Ocultar el texto de las tarjetas al iniciar la página
             $("#portadaSierra").hide();
             $("#portadaSierra").fadeIn(2500);
+            $('#tituloSierra').animate({ fontSize: '58px', color: 'green' }, 2000);
 
             $(".card-text").hide();
 
@@ -224,6 +227,9 @@
 
                 <main>
                     <!-- *************** A PARTIR DE AQUÍ VA EL CÓDIGO DE CADA REGIÓN ****************** -->
+                    <h2 id="tituloSierra"
+                        style="padding: 20px 0px 0px; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif "
+                        class="animated-tittle">SIERRA ECUATORIANA</h2>
                     <div class="m-2 text-center">
                         <img src="assets/imgSierra/bannerSierra.jpg" alt="" class="img-fluid" id="portadaSierra">
                     </div>

@@ -18,11 +18,44 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
+    <script src="assets/js/script_Menu.js"></script>
+
     <title>ECUA-TRAVELS</title>
     <style>
-        * {
-            /* border: 1px solid; */
+       /* ESTILOS PARA MENÚ DESLIZANTE */
+
+       #menu{
+            width: 180px;
+            background-color: rgb(46, 48, 49);
+            color:white;
+            border: 3px solid whitesmoke;
+            border-radius: 20px;
+            padding: 20px 20px 0 20px;
+            position: fixed;
+            z-index: 100;
+            left: -150px;
+            top: 180px;
         }
+
+        #menu>div{
+            font:bold;
+            margin-bottom: 40px;
+            transition: all 0.3s;
+            
+        }
+
+        #menu>div a{
+            color: inherit;
+            text-decoration: none;
+        }
+
+        #menu>div:hover{
+            font-size: 50;
+            transform: scale(1.2);
+        }
+
+        /* FIN ESTILOS PARA MENÚ DESLIZANTE */
+       
 
         .logo {
             transition: all 0.3s ease-in-out;
@@ -203,6 +236,17 @@
                 <div class="col-1"></div>
 
             </header>
+
+            <!-- EMPIEZA MENÚ DESPLEGABLE -->
+            <div id="menu">
+                <div > <a href="#tituloAv"> <h6 class="text-center">AVENTURA Y NATURZALEZA</h6></a> </div>
+                <div > <a href="#gastronomia"> <h6 class="text-center">GASTRONOMÍA</h6> </a></div>
+                <div > <a href="#cultura"> <h6 class="text-center">CULTURAS</h6></a></div>
+            </div>
+        
+
+            <!-- TERMINA MENPU DESPLEGABLE -->
+
             <div class="container">
 
 
@@ -381,7 +425,7 @@
             <!-- Segunda parte -->
             <div class="row justify-content-start">
                 <div class=" col-lg-4 col-md-12 col-sm-12">
-                    <h3 class="font-italic text-primary" style="text-align: center;">
+                    <h3 class="font-italic text-primary" style="text-align: center;" id="gastronomia">
                         GASTRONOMÍA</h3>
                 </div>
                 <div class=" col-2"></div>
@@ -474,7 +518,7 @@
         <!-- tercera parte de las culturas  -->
         <div class="row justify-content-end">
             <div class=" col-lg-4 col-md-12 col-sm-12">
-                <h3 class="font-italic text-danger" style="text-align: center;">
+                <h3 class="font-italic text-danger" style="text-align: center;" id="cultura">
                     CULTURAS</h3>
             </div>
             <div class=" col-2"></div>
