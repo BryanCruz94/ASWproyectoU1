@@ -17,55 +17,50 @@
     crossorigin="anonymous"></script>
 
   <title>ECUA-TRAVELS</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
-    <script src="assets/js/script_Menu.js"></script>
 
 
   <style>
-   
-   /* ESTILOS PARA MENÚ DESLIZANTE */
+    /* ESTILOS PARA MENÚ DESLIZANTE */
 
-   #menu{
-            width: 180px;
-            background-color: rgb(46, 48, 49);
-            color:white;
-            border: 3px solid whitesmoke;
-            border-radius: 20px;
-            padding: 20px 20px 0 20px;
-            position: fixed;
-            z-index: 100;
-            left: -150px;
-            top: 180px;
-        }
+    .menu {
+      width: 180px;
+      background-color: rgb(46, 48, 49);
+      color: white;
+      border: 3px solid whitesmoke;
+      border-radius: 20px;
+      padding: 20px 20px 0 20px;
+      position: fixed;
+      z-index: 100;
+      left: -150px;
+      top: 180px;
+    }
 
-        #menu>div{
-            font:bold;
-            margin-bottom: 40px;
-            transition: all 0.3s;
-            
-        }
+    .menu>div {
+      font: bold;
+      margin-bottom: 40px;
+      transition: all 0.3s;
 
-        #menu>div a{
-            color: inherit;
-            text-decoration: none;
-        }
+    }
 
-        #menu>div:hover{
-            font-size: 50;
-            transform: scale(1.2);
-        }
+    .menu>div a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        /* FIN ESTILOS PARA MENÚ DESLIZANTE */
-       
+    .menu>div:hover {
+      font-size: 50;
+      transform: scale(1.2);
+    }
+
+    /* FIN ESTILOS PARA MENÚ DESLIZANTE */
+
 
     .logo {
       transition: all 0.3s ease-in-out;
@@ -112,6 +107,8 @@
     .image-container:hover {
       transform: scaleX(1.5);
     }
+
+
 
     @keyframes walk {
       0% {
@@ -203,17 +200,16 @@
     }
 
     .accordion-image {
-            transition: transform 0.3s ease-in-out;
-        }
+      transition: transform 0.3s ease-in-out;
+    }
 
-        .accordion-image:hover {
-            transform: scale(1.1);
-        }
+    .accordion-image:hover {
+      transform: scale(1.1);
+    }
 
-        .card-title{
-          text-align: center;
-        }
-
+    .card-title {
+      text-align: center;
+    }
   </style>
 
   <script>
@@ -242,7 +238,7 @@
       };
 
 
-      
+
       $(".ctex").hide();
 
       $(".card").hover(
@@ -255,24 +251,12 @@
       );
 
 
-
-
-    });
-
-    $(document).ready(function () {
-
       $("#ceviche").hide();
       $('#imgcevi').click(function () {
         $(this).attr("class", "card-img-top nuevocev");
         $("#ceviche").fadeIn(1000);
       });
 
-    });
-
-
-
-
-    $(document).ready(function () {
       $('.collapse').on('show.bs.collapse', function () {
         $(this).prev('.card-header').find('.btn').addClass('active');
         $(this).prev('.card-header').find('.btn').removeClass('collapsed');
@@ -285,12 +269,26 @@
         $(this).prev('.card-header').find('.btn').attr('aria-expanded', false);
       });
 
-      $('#myButton').on('click', function() {
-            $(this).hide();
-            $('.myContent').fadeIn(1000);
-          });
+      $('#myButton').on('click', function () {
+        $(this).hide();
+        $('.myContent').fadeIn(1000);
+      });
 
-          $('#tituloAmaz').animate({ fontSize: '58px', color: 'green' }, 2000);
+      $('#tituloAmaz').animate({ fontSize: '58px', color: 'green' }, 2000);
+
+      
+      $(".menu").hover(function () {
+
+        $(this).animate({
+          left: "-22px"
+        }, 500, "easeInSine");
+      }, function () {
+        $(this).stop().animate({
+          left: "-150px"
+        }, 1500, "easeOutBounce")
+      });
+
+
     });
 
 
@@ -335,10 +333,23 @@
 
       </header>
 
-      
 
 
-    <!-- TERMINA MENPU DESPLEGABLE -->
+      <!-- EMPIEZA MENÚ DESPLEGABLE -->
+      <div class="menu">
+        <div> <a href="#gastronomia">
+            <h6 class="text-center">GASTRONOMÍA</h6>
+          </a></div>
+        <div> <a href="#lugTuristicos">
+            <h6 class="text-center">LUGARES TURÍSTICOS</h6>
+          </a> </div>
+        <div> <a href="#costTradiciones">
+            <h6 class="text-center">COSTUMBRES Y TRADICIONES</h6>
+          </a> </div>
+      </div>
+
+
+      <!-- TERMINA MENPU DESPLEGABLE -->
 
       <div class="container">
 
@@ -379,8 +390,8 @@
 
         <main>
           <h2 id="tituloAmaz"
-          style="padding: 20px 0 0 0 ; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif "
-          class="animated-tittle">GALÁPAGOS</h2>
+            style="padding: 20px 0 0 0 ; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif "
+            class="animated-tittle">GALÁPAGOS</h2>
           <img id="walking-gif" src="assets/imgGalapagos/trutr.gif">
 
           <div class="m-2 text-center">
@@ -396,7 +407,7 @@
                       <h2 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
                           aria-expanded="false" aria-controls="collapseOne">
-                          <p ip="ps" style="text-align: center;">La deliciosa gastronomia</p>
+                          <p id="gastronomia" style="text-align: center;">La deliciosa gastronomia</p>
                         </button>
                       </h2>
                     </div>
@@ -508,7 +519,7 @@
                       <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                           data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          <p style="text-align: center;">La diversidad de lugares
+                          <p id="lugTuristicos" style="text-align: center;">La diversidad de lugares
                             turisticos</p>
                         </button>
                       </h2>
@@ -568,7 +579,8 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/tortuga.png" class="card-img-top accordion-image" alt="Tortuga Bay">
+                                  <img src="assets/imgGalapagos/tortuga.png" class="card-img-top accordion-image"
+                                    alt="Tortuga Bay">
                                   <div class="card-body">
                                     <h5 class="card-title">Tortuga Bay</h5>
                                     <p class="card-text">Bahía Tortuga es una hermosa playa de arena blanca, ubicada en
@@ -660,7 +672,8 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/ratonera.png" class="card-img-top accordion-image" alt="LA RATONERA">
+                                  <img src="assets/imgGalapagos/ratonera.png" class="card-img-top accordion-image"
+                                    alt="LA RATONERA">
                                   <div class="card-body">
                                     <h5 class="card-title">LA RATONERA</h5>
                                     <p class="card-text">La Ratonera, ubicada en Santa Cruz, Galápagos, está localizada
@@ -679,7 +692,8 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/gemelos.jpg" class="card-img-top accordion-image" alt="LOS GEMELOS">
+                                  <img src="assets/imgGalapagos/gemelos.jpg" class="card-img-top accordion-image"
+                                    alt="LOS GEMELOS">
                                   <div class="card-body">
                                     <h5 class="card-title">LOS GEMELOS</h5>
                                     <p class="card-text">
@@ -730,7 +744,7 @@
                       <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                           data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          <p style="text-align: center;">Tradiciones</p>
+                          <p id="costTradiciones" style="text-align: center;">Tradiciones</p>
                         </button>
                       </h2>
                     </div>
@@ -771,35 +785,41 @@
                                   <div class="tradicion">
                                     <img src="assets/imgGalapagos/baile.png" width="500px" height="300px"
                                       alt="Imagen del baile ">
-                                      <div class="myContent" style="display: none;">
-                                    <h3>12 de febrero, el Día de Galápagos provincialización </h3>
-                                    <p>El 12 de febrero de todos los años se conmemora el día de las Islas Galápagos, la
-                                      celebración se realiza en los cantones de Santa Cruz y San Cristóbal donde los
-                                      turistas pueden disfrutar de las maravillas que Galápagos ofrece como desfiles
-                                      cívicos, pregón con carros alegóricos, comparsas, competencias náuticas, ciclismo
-                                      y
-                                      programas artísticos.
+                                    <div class="myContent" style="display: none;">
+                                      <h3>12 de febrero, el Día de Galápagos provincialización </h3>
+                                      <p>El 12 de febrero de todos los años se conmemora el día de las Islas Galápagos,
+                                        la
+                                        celebración se realiza en los cantones de Santa Cruz y San Cristóbal donde los
+                                        turistas pueden disfrutar de las maravillas que Galápagos ofrece como desfiles
+                                        cívicos, pregón con carros alegóricos, comparsas, competencias náuticas,
+                                        ciclismo
+                                        y
+                                        programas artísticos.
                                     </div>
                                   </div>
-                  
+
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                   <div class="tradicion">
                                     <img src="assets/imgGalapagos/Agueda.jpg" width="500px" height="300px"
                                       alt="Imagen de la virgen del Agueda">
-                                      <div class="myContent" style="display: none;">
-                                    <h2>Las Fiestas de Santa Agueda</h2>
-                                    <p> tienen su comienzo con el encendido de la hoguera en honor Santa Agueda la noche
-                                      anterior a su día. En este día se consume vino dulce y los tradicionales bollos a
-                                      todos los asistentes. Al día siguiente, el 6 de febrero, se celebra el día de la
-                                      Santa
-                                      Aguedilla. Se realizan misas, procesiones y paradas de fe en las cuales se reparte
-                                      comida a los feligreses.</p>
+                                    <div class="myContent" style="display: none;">
+                                      <h2>Las Fiestas de Santa Agueda</h2>
+                                      <p> tienen su comienzo con el encendido de la hoguera en honor Santa Agueda la
+                                        noche
+                                        anterior a su día. En este día se consume vino dulce y los tradicionales bollos
+                                        a
+                                        todos los asistentes. Al día siguiente, el 6 de febrero, se celebra el día de la
+                                        Santa
+                                        Aguedilla. Se realizan misas, procesiones y paradas de fe en las cuales se
+                                        reparte
+                                        comida a los feligreses.</p>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <h3 class="btn" id="myButton" style="margin-left: 420px; background: rgb(148, 241, 252);">Mostrar contenido</h3>
+                              <h3 class="btn" id="myButton" style="margin-left: 420px; background: rgb(148, 241, 252);">
+                                Mostrar contenido</h3>
                             </div>
 
 
