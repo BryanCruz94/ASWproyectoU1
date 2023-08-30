@@ -1,3 +1,45 @@
+<?php
+function validarNombre($nombre): bool
+{
+    $patron = '/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/';
+    return preg_match($patron, $nombre) === 1;
+}
+// Verifica si se ha enviado el formulario
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Verifica si se han llenado todos los campos
+    if (!empty($_POST['nombre']) && !empty($_POST['correo']) && !empty($_POST['visita']) && !empty($_POST['comentarios'])) {
+        // Obtiene los datos del formulario
+        $nombre = $_POST['nombre'];
+        $correo = $_POST['correo'];
+        $visita = $_POST['visita'];
+        $comentarios = $_POST['comentarios'];
+
+        if (!validarNombre($nombre)) {
+            echo "<script>alert('Revise que su nombre este escrito correctamente')</script>";
+        } else {
+            // Crea el archivo en la carpeta noticias y guarda los datos
+            $archivo = fopen('sierra.txt', 'a');
+            fwrite($archivo, "Nombre: " . $nombre . "\n");
+            fwrite($archivo, "Correo: " . $correo . "\n");
+            fwrite($archivo, "Visita: " . $visita . "\n");
+            fwrite($archivo, "Comentarios: " . $comentarios . "\n\n");
+            fclose($archivo);
+
+            // Limpia los campos
+            $_POST['nombre'] = '';
+            $_POST['correo'] = '';
+            $_POST['visita'] = '';
+            $_POST['comentarios'] = '';
+
+            // Muestra una alerta de éxito
+            echo "<script>alert('Los datos se han guardado correctamente.')</script>";
+        }
+    } else {
+        // Muestra una alerta de error si no se han llenado todos los campos
+        echo "<script>alert('Por favor, llene todos los campos antes de enviar el formulario.')</script>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,20 +54,17 @@
 
     <script src="assets/js/script_Menu.js"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <title>ECUA-TRAVELS</title>
     <style>
-       /* ESTILOS PARA MENÚ DESLIZANTE */
+        /* ESTILOS PARA MENÚ DESLIZANTE */
 
-       #menu{
+        #menu {
             width: 180px;
             background-color: rgb(46, 48, 49);
-            color:white;
+            color: white;
             border: 3px solid whitesmoke;
             border-radius: 20px;
             padding: 20px 20px 0 20px;
@@ -35,25 +74,25 @@
             top: 180px;
         }
 
-        #menu>div{
-            font:bold;
+        #menu>div {
+            font: bold;
             margin-bottom: 40px;
             transition: all 0.3s;
-            
+
         }
 
-        #menu>div a{
+        #menu>div a {
             color: inherit;
             text-decoration: none;
         }
 
-        #menu>div:hover{
+        #menu>div:hover {
             font-size: 50;
             transform: scale(1.2);
         }
 
         /* FIN ESTILOS PARA MENÚ DESLIZANTE */
-       
+
         .logo {
             transition: all 0.3s ease-in-out;
         }
@@ -113,25 +152,26 @@
         }
     </style>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Ocultar el texto de las tarjetas al iniciar la página
             $("#portadaSierra").hide();
             $("#portadaSierra").fadeIn(2500);
-            $('#tituloSierra').animate({ fontSize: '58px', color: 'green' }, 2000);
+            $('#tituloSierra').animate({
+                fontSize: '58px',
+                color: 'green'
+            }, 2000);
 
             $(".card-text").hide();
 
             $(".card").hover(
-                function () {
+                function() {
                     $(this).find(".card-text").slideDown(); // Mostrar el texto al pasar el cursor
                 },
-                function () {
+                function() {
                     $(this).find(".card-text").slideUp(); // Ocultar el texto al quitar el cursor
                 }
             );
         });
-
-
     </script>
 
 </head>
@@ -144,8 +184,7 @@
                 <div class="col-1  ">
                     <div class="row justify-content-end mt-1 ml-1">
                         <div class="col align-self-end">
-                            <a href="#"> <img class="logo" src="assets/imgIndex/logotipo-de-instagram.png" width="20px"
-                                    alt=""></a>
+                            <a href="#"> <img class="logo" src="assets/imgIndex/logotipo-de-instagram.png" width="20px" alt=""></a>
                         </div>
                     </div>
                     <div class="row justify-content-end mt-1 ml-1">
@@ -155,8 +194,7 @@
                     </div>
                     <div class="row justify-content-end mt-1 ml-1">
                         <div class="col align-self-end">
-                            <a href="#"> <img class="logo" src="assets/imgIndex/correo-electronico-vacio.png"
-                                    width="25px" alt=""></a>
+                            <a href="#"> <img class="logo" src="assets/imgIndex/correo-electronico-vacio.png" width="25px" alt=""></a>
                         </div>
                     </div>
 
@@ -177,12 +215,20 @@
 
             <!-- EMPIEZA MENÚ DESPLEGABLE -->
             <div id="menu">
-                <div > <a href="#lugTuristicos"> <h6 class="text-center">LUGARES TURÍSTICOS</h6></a> </div>
-                <div > <a href="#gastronomia"> <h6 class="text-center">GASTRONOMÍA</h6> </a></div>
-                <div > <a href="#culturas"> <h6 class="text-center">CULTURAS</h6></a></div>
-                <div > <a href="#costTradiciones"> <h6 class="text-center">COSTUMBRES Y TRADICIONES</h6></a> </div>
+                <div> <a href="#lugTuristicos">
+                        <h6 class="text-center">LUGARES TURÍSTICOS</h6>
+                    </a> </div>
+                <div> <a href="#gastronomia">
+                        <h6 class="text-center">GASTRONOMÍA</h6>
+                    </a></div>
+                <div> <a href="#culturas">
+                        <h6 class="text-center">CULTURAS</h6>
+                    </a></div>
+                <div> <a href="#costTradiciones">
+                        <h6 class="text-center">COSTUMBRES Y TRADICIONES</h6>
+                    </a> </div>
             </div>
-        
+
 
             <!-- TERMINA MENPU DESPLEGABLE -->
 
@@ -205,8 +251,7 @@
                         </div>
                         <div class="col">
                             <li class="nav-item">
-                                <a id="btnSierra" class="nav-link text-light bg-dark fw-bold"
-                                    href="sierra.html">SIERRA</a>
+                                <a id="btnSierra" class="nav-link text-light bg-dark fw-bold" href="sierra.html">SIERRA</a>
                             </li>
                         </div>
                         <div class="col">
@@ -227,9 +272,7 @@
 
                 <main>
                     <!-- *************** A PARTIR DE AQUÍ VA EL CÓDIGO DE CADA REGIÓN ****************** -->
-                    <h2 id="tituloSierra"
-                        style="padding: 20px 0px 0px; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif "
-                        class="animated-tittle">SIERRA ECUATORIANA</h2>
+                    <h2 id="tituloSierra" style="padding: 20px 0px 0px; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif " class="animated-tittle">SIERRA ECUATORIANA</h2>
                     <div class="m-2 text-center">
                         <img src="assets/imgSierra/bannerSierra.jpg" alt="" class="img-fluid" id="portadaSierra">
                     </div>
@@ -241,8 +284,7 @@
                             <div class="card mb-3">
                                 <div class="row g-0">
                                     <div class="col-12 text-center">
-                                        <img id="cotopaxi" src="assets/imgSierra/ParqueCotopaxi.jpg"
-                                            style="max-height: 150px;" class="img-fluid rounded-start" alt="">
+                                        <img id="cotopaxi" src="assets/imgSierra/ParqueCotopaxi.jpg" style="max-height: 150px;" class="img-fluid rounded-start" alt="">
                                     </div>
                                     <div class="col-12 ">
                                         <div class="card-body">
@@ -260,8 +302,7 @@
                             <div class="card mb-3">
                                 <div class="row g-0">
                                     <div class="col-12 text-center">
-                                        <img id="diablo" src="assets/imgSierra/Nariz-del-Diablo-1.jpg"
-                                            style="max-height: 150px;" class="img-fluid rounded-start" alt="">
+                                        <img id="diablo" src="assets/imgSierra/Nariz-del-Diablo-1.jpg" style="max-height: 150px;" class="img-fluid rounded-start" alt="">
                                     </div>
                                     <div class="col-12">
                                         <div class="card-body">
@@ -278,9 +319,7 @@
                             <div class="card mb-3">
                                 <div class="row g-0">
                                     <div class="col-12  text-center">
-                                        <img id="baños" src="assets/imgSierra/Baños-de-Agua-Santa.jpg"
-                                            style="max-height: 150px; width: 290px;" class="img-fluid rounded-start"
-                                            alt="">
+                                        <img id="baños" src="assets/imgSierra/Baños-de-Agua-Santa.jpg" style="max-height: 150px; width: 290px;" class="img-fluid rounded-start" alt="">
                                     </div>
                                     <div class="col-12 ">
                                         <div class="card-body">
@@ -297,8 +336,7 @@
                             <div class="card mb-3">
                                 <div class="row g-0">
                                     <div class="col-12 text-center">
-                                        <img id="quilotoa" src="assets/imgSierra/quilotoa-3.jpg" style="height: 150px;"
-                                            class="img-fluid rounded-start" alt="">
+                                        <img id="quilotoa" src="assets/imgSierra/quilotoa-3.jpg" style="height: 150px;" class="img-fluid rounded-start" alt="">
                                     </div>
                                     <div class="col-12 ">
                                         <div class="card-body">
@@ -330,23 +368,19 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-3">
                                 <h5 class="card-title mb-2" style="text-align: center;">Locro de papa</h5>
-                                <img class="card-img-top accordion-image" src="assets/imgSierra/Locro-Papa.jpg"
-                                    style="max-width: 100%; height: auto;" alt="">
+                                <img class="card-img-top accordion-image" src="assets/imgSierra/Locro-Papa.jpg" style="max-width: 100%; height: auto;" alt="">
                             </div>
                             <div class="col-sm-12 col-md-3">
                                 <h5 class="card-title mb-2" style="text-align: center;">Cuy asado</h5>
-                                <img class="card-img-top accordion-image" src="assets/imgSierra/Cuy-asado.jpg"
-                                    style="max-width: 100%; height: auto;" alt="">
+                                <img class="card-img-top accordion-image" src="assets/imgSierra/Cuy-asado.jpg" style="max-width: 100%; height: auto;" alt="">
                             </div>
                             <div class="col-sm-12 col-md-3">
                                 <h5 class="card-title mb-2" style="text-align: center;">Llapingachos</h5>
-                                <img class="card-img-top accordion-image" src="assets/imgSierra/llapingachos.jpg"
-                                    style="max-width: 100%; height: auto;" alt="">
+                                <img class="card-img-top accordion-image" src="assets/imgSierra/llapingachos.jpg" style="max-width: 100%; height: auto;" alt="">
                             </div>
                             <div class="col-sm-12 col-md-3">
                                 <h5 class="card-title mb-2" style="text-align: center;">Yahuarlocro</h5>
-                                <img class="card-img-top accordion-image" src="assets/imgSierra/Yahuarlocro.jpg"
-                                    style="max-width: 100%; height: auto;" alt="">
+                                <img class="card-img-top accordion-image" src="assets/imgSierra/Yahuarlocro.jpg" style="max-width: 100%; height: auto;" alt="">
                             </div>
                         </div>
                     </div>
@@ -387,8 +421,7 @@
                         <div class="row">
                             <div class="col-md-4" style="padding: 20px">
                                 <div class="card text-center mb-3">
-                                    <img src="assets/imgSierra/mamaNegra.jpg" style="height: 260px;"
-                                        class="card-img-top accordion-image" alt="">
+                                    <img src="assets/imgSierra/mamaNegra.jpg" style="height: 260px;" class="card-img-top accordion-image" alt="">
                                     <div class="card-body">
                                         <h5 class="card-title accordion-image-title">La Mama Negra</h5>
                                         <p class="card-text accordion-image-text">
@@ -401,8 +434,7 @@
                             </div>
                             <div class="col-md-4" style="padding: 20px">
                                 <div class="card text-center mb-3">
-                                    <img src="assets/imgSierra/intiRaymi.jpg" class="card-img-top accordion-image"
-                                        alt="...">
+                                    <img src="assets/imgSierra/intiRaymi.jpg" class="card-img-top accordion-image" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title accordion-image-title">Inti Raymi</h5>
                                         <p class="card-text accordion-image-text">
@@ -415,8 +447,7 @@
                             </div>
                             <div class="col-md-4" style="padding: 20px">
                                 <div class="card text-center ">
-                                    <img src="assets/imgSierra/Diablada de pillaro.jpg"
-                                        class="card-img-top accordion-image" alt="...">
+                                    <img src="assets/imgSierra/Diablada de pillaro.jpg" class="card-img-top accordion-image" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title accordion-image-title">Diablada de pillaro</h5>
                                         <p class="card-text accordion-image-text">
@@ -430,27 +461,49 @@
 
 
                         </div>
+                        <!--Bloque de Texto-->
+                        <hr style="border:0px; border-top: 5px double #000;">
+                        <h2 class="text-bg-dark text-center" id="demo">PREGUNTAS</h2>
+                        <hr style="border:0px; border-top: 5px double #000;">
+
+                        <!--Formulario-->
+                        <form id="form-noticias" method="POST" action="">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre">
+                                <label for="nombre">Nombre y Apellido</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="correo" name="correo" placeholder="name@gmail.com">
+                                <label for="correo">Correo</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="visita" name="visita" style="height: 100px"></textarea>
+                                <label for="visita">¿Has visitado la sierra ecuatoriana antes? Dónde?</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="comentarios" name="comentarios" style="height: 100px"></textarea>
+                                <label for="comentarios">Déjanos tus comentarios para mejorar el sitio web.</label>
+                            </div>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <button class="btn btn-dark" type="submit">Enviar</button>
+                            </div>
+                        </form><br><br>
                     </div>
                     <!-- *************** AQUI FINALIZA EL CÓDIGO DE CADA REGIÓN ****************** -->
                 </main>
             </div>
 
-            <footer class="row justify-content-center ml-3 mr-3 mt-4"
-                style="border-top:3px solid; background-color: rgb(46, 48, 49); color:white">
+            <footer class="row justify-content-center ml-3 mr-3 mt-4" style="border-top:3px solid; background-color: rgb(46, 48, 49); color:white">
 
                 <!-- AQUI EMPIEZA LOGOS -->
                 <div class="col-lg-4 col-md-8 col-sm-11 order-lg-1 order-md-2 order-sm-2 align-self-center">
-                    <a href="index.html"><img class="img-fluid" src="assets/imgIndex/LOGO_FOOTER.jpg"
-                            alt="logo Imagen"></a>
+                    <a href="index.html"><img class="img-fluid" src="assets/imgIndex/LOGO_FOOTER.jpg" alt="logo Imagen"></a>
                     <center>
                         <div class="">
-                            <a href="#"> <img class="logo " style="margin: 20px;"
-                                    src="assets/imgIndex/logotipo-de-instagram_f.png" width="32px" alt=""></a>
-                            <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/facebook_f.png"
-                                    width="32px" alt=""></a>
+                            <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/logotipo-de-instagram_f.png" width="32px" alt=""></a>
+                            <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/facebook_f.png" width="32px" alt=""></a>
 
-                            <a href="#"> <img class="logo " style="margin: 20px;"
-                                    src="assets/imgIndex/correo-electronico-vacio_f.png" width="35px" alt=""></a>
+                            <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/correo-electronico-vacio_f.png" width="35px" alt=""></a>
 
                         </div>
                     </center>
@@ -472,10 +525,7 @@
                 <!-- AQUI EMPIEZA ENCUENTRANOS -->
                 <div class="col-lg-4 col-md-8 col-sm-11 order-lg-3 order-md-3 order-sm-3 align-self-center">
                     <h5 class="text-center mt-3">ENCUÉNTRANOS</h5>
-                    <iframe class="border"
-                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d34061.39853387128!2d-78.49690433964722!3d-0.18395374830270877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMINISTERIO%20DE%20TURISMO!5e0!3m2!1ses!2sec!4v1685843890886!5m2!1ses!2sec"
-                        width="99%" height="380px" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="border" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d34061.39853387128!2d-78.49690433964722!3d-0.18395374830270877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMINISTERIO%20DE%20TURISMO!5e0!3m2!1ses!2sec!4v1685843890886!5m2!1ses!2sec" width="99%" height="380px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </footer>
         </div>
