@@ -845,7 +845,7 @@
           <br>
           <br>
           
-          <a href="pago2.php" class="btn btn-primary"><i class="fas fa-credit-card"></i> <span style="margin-left: 10px;">Buscas paquetes, Reserva ahora ya!</span></a>
+          <a href="Galapagos/pago2.php" class="btn btn-primary"><i class="fas fa-credit-card"></i> <span style="margin-left: 10px;">Buscas paquetes, Reserva ahora ya!</span></a>
 
         </main>
       </div>
