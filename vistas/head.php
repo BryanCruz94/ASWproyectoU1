@@ -73,7 +73,13 @@
             </div>
             <div class="col">
                 <li class="nav-item">
-                    <a class="nav-link" href="amazon.html">AMAZONÍA</a>
+                <?php
+                    if ($nombreArchivo == 'amazon.php') {
+                        echo '<a class="nav-link text-light bg-dark  fw-bold" href="amazon.php">AMAZONÍA</a>';
+                    } else {
+                        echo '<a class="nav-link " href="amazon.php">AMAZONÍA</a>';
+                    }
+                    ?>
                 </li>
             </div>
             <div class="col">

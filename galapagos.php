@@ -9,20 +9,13 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
   <title>ECUA-TRAVELS</title>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
 
@@ -213,7 +206,7 @@
   </style>
 
   <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
       // Ocultar el texto de las tarjetas al iniciar la página
       $("#portadaGalapagos").hide();
       $("#portadaGalapagos").fadeIn(8000);
@@ -222,18 +215,21 @@
       $("#walking-gif").animate({
         left: "400px",
         top: "100px"
-      }, 7000, function () {
+      }, 7000, function() {
         $(this).fadeOut();
       });
 
       // Con JavaScript
       const walkingGif = document.getElementById("walking-gif");
-      walkingGif.animate([
-        { transform: 'translate(0, 0)' },
-        { transform: 'translate(900px, 400px)' }
+      walkingGif.animate([{
+          transform: 'translate(0, 0)'
+        },
+        {
+          transform: 'translate(900px, 400px)'
+        }
       ], {
         duration: 5500,
-      }).onfinish = function () {
+      }).onfinish = function() {
         walkingGif.style.display = "none";
       };
 
@@ -242,22 +238,22 @@
       $(".ctex").hide();
 
       $(".card").hover(
-        function () {
+        function() {
           $(this).find("#marinero").slideDown().stop(); // Mostrar el texto al pasar el cursor
         },
-        function () {
+        function() {
           $(this).find("#marinero").slideUp().stop(); // Ocultar el texto al quitar el cursor
         }
       );
 
 
-      $('.collapse').on('show.bs.collapse', function () {
+      $('.collapse').on('show.bs.collapse', function() {
         $(this).prev('.card-header').find('.btn').addClass('active');
         $(this).prev('.card-header').find('.btn').removeClass('collapsed');
         $(this).prev('.card-header').find('.btn').attr('aria-expanded', true);
       });
 
-      $('.collapse').on('hide.bs.collapse', function () {
+      $('.collapse').on('hide.bs.collapse', function() {
         $(this).prev('.card-header').find('.btn').removeClass('active');
         $(this).prev('.card-header').find('.btn').addClass('collapsed');
         $(this).prev('.card-header').find('.btn').attr('aria-expanded', false);
@@ -265,31 +261,34 @@
 
 
       $("#ceviche").hide();
-      $('#imgcevi').click(function () {
+      $('#imgcevi').click(function() {
         $(this).attr("class", "card-img-top nuevocev");
         $("#ceviche").fadeIn(1000);
       });
 
 
-      $('#myButton').on('click', function () {
+      $('#myButton').on('click', function() {
         $(this).hide();
         $('.myContent').fadeIn(1000);
       });
 
 
-      
-      $('#tituloAmaz').animate({ fontSize: '58px', color: 'green' }, 2000);
 
-      
+      $('#tituloAmaz').animate({
+        fontSize: '58px',
+        color: 'green'
+      }, 2000);
 
 
 
-      $(".menu").hover(function () {
+
+
+      $(".menu").hover(function() {
 
         $(this).animate({
           left: "-22px"
         }, 500, "easeInSine");
-      }, function () {
+      }, function() {
         $(this).stop().animate({
           left: "-150px"
         }, 1500, "easeOutBounce")
@@ -297,8 +296,6 @@
 
 
     });
-
-
   </script>
 
 </head>
@@ -307,100 +304,45 @@
 
   <div class="row mt-2">
     <div class="col">
-      <header class="row justify-content-center align-items-center" id="encabezado">
-        <div class="col-1  ">
-          <div class="row justify-content-end mt-1 ml-1">
-            <div class="col align-self-end">
-              <a href="#"> <img class="logo" src="assets/imgIndex/logotipo-de-instagram.png" width="20px" alt=""></a>
-            </div>
-          </div>
-          <div class="row justify-content-end mt-1 ml-1">
-            <div class="col align-self-end">
-              <a href="#"> <img class="logo" src="assets/imgIndex/facebook.png" width="20px" alt=""></a>
-            </div>
-          </div>
-          <div class="row justify-content-end mt-1 ml-1">
-            <div class="col align-self-end">
-              <a href="#"> <img class="logo" src="assets/imgIndex/correo-electronico-vacio.png" width="25px" alt=""></a>
-            </div>
-          </div>
 
 
-        </div>
+      <?php
 
+      $nombreArchivo = basename(__FILE__);
+      ?>
 
-        <div class="col-10">
-          <H1 class="text-center ">ECUA-TRAVELS v3</H1>
-          <div class="text-center  h5">Al menos una vez en la vida debes visitar Ecuador, y vivir la
-            aventura
-            de conocer un país de paisajes tan variados y entretenimiento por montón</div>
+      <?php
+      @require_once 'vistas/head.php'
 
-        </div>
-        <div class="col-1"></div>
+      ?>
 
-      </header>
-
-
-
-      <!-- EMPIEZA MENÚ DESPLEGABLE -->
-      <div class="menu">
-        <div> <a href="#gastronomia">
-            <h6 class="text-center">GASTRONOMÍA</h6>
-          </a></div>
-        <div> <a href="#lugTuristicos">
-            <h6 class="text-center">LUGARES TURÍSTICOS</h6>
-          </a> </div>
-        <div> <a href="#costTradiciones">
-            <h6 class="text-center">COSTUMBRES Y TRADICIONES</h6>
-          </a> </div>
-      </div>
-
-
-      <!-- TERMINA MENPU DESPLEGABLE -->
 
       <div class="container">
 
-        <nav class=" navbar-expand-lg navbar-light bg-light">
 
-          <ul class="nav navbar-nav  justify-content-center text-center">
-            <div class="col">
-              <li class="nav-item">
-                <!-- *************AQUI SE DEBE CAMBIAR EL HIPERVINCULO**************** -->
-                <a class="nav-link " href="index.html">INICIO</a>
-              </li>
-            </div>
-            <div class="col">
-              <li class="nav-item">
-                <a class="nav-link " href="costa.html">COSTA</a>
-              </li>
-            </div>
-            <div class="col">
-              <li class="nav-item">
-                <a class="nav-link " href="sierra.html">SIERRA</a>
-              </li>
-            </div>
-            <div class="col">
-              <li class="nav-item">
-                <a class="nav-link " href="amazon.html">AMAZONÍA</a>
-              </li>
-            </div>
-            <div class="col">
-              <li class="nav-item">
-                <a class="nav-link text-light bg-dark  fw-bold" href="galapagos.html">GALÁPAGOS</a>
-              </li>
-            </div>
-          </ul>
+        <!-- EMPIEZA MENÚ DESPLEGABLE -->
+        <div class="menu">
+          <div> <a href="#gastronomia">
+              <h6 class="text-center">GASTRONOMÍA</h6>
+            </a></div>
+          <div> <a href="#lugTuristicos">
+              <h6 class="text-center">LUGARES TURÍSTICOS</h6>
+            </a> </div>
+          <div> <a href="#costTradiciones">
+              <h6 class="text-center">COSTUMBRES Y TRADICIONES</h6>
+            </a> </div>
+        </div>
 
-        </nav>
+
+        <!-- TERMINA MENPU DESPLEGABLE -->
+
 
 
 
         <main>
 
-          <h2 id="tituloAmaz"
-            style="padding: 20px 0 0 0 ; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif "
-            class="animated-tittle">GALÁPAGOS</h2>
-            
+          <h2 id="tituloAmaz" style="padding: 20px 0 0 0 ; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif " class="animated-tittle">GALÁPAGOS</h2>
+
           <img id="walking-gif" src="assets/imgGalapagos/trutr.gif">
 
           <div class="m-2 text-center">
@@ -414,15 +356,13 @@
                   <div class="card">
                     <div class="card-header" id="headingOne">
                       <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                          aria-expanded="false" aria-controls="collapseOne">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                           <p id="gastronomia" style="text-align: center;">La deliciosa gastronomia</p>
                         </button>
                       </h2>
                     </div>
 
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                      data-parent="#accordionExample">
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                       <div class="card-body">
                         <div class="collapse-content">
                           <div class="card-body">
@@ -430,8 +370,7 @@
                               <div class="col-lg-4 col-md-8" style="padding: 20px">
                                 <!--Clase de la tarjeta modificada en el centrado del texto y el background de la tarjeta-->
                                 <div class="card text-center  mb-3">
-                                  <img src="assets/imgGalapagos/30d4adef40e916e7e201a9d1d1c8f61a.jpg"
-                                    style="height: 260px;" class="card-img-top" alt="" />
+                                  <img src="assets/imgGalapagos/30d4adef40e916e7e201a9d1d1c8f61a.jpg" style="height: 260px;" class="card-img-top" alt="" />
                                   <div class="card-body">
                                     <h5 class="card-title">Arroz Marinero</h5>
                                     <p class="card-text ctex" style="text-align: justify;" id="marinero">
@@ -448,8 +387,7 @@
                               </div>
                               <div class="col-lg-4 col-md-8" style="padding: 20px">
                                 <div class="card text-center mb-3">
-                                  <img src="assets/imgGalapagos/bacalao.jpg" style="height: 260px;" class="card-img-top"
-                                    alt="..." id="image-1" />
+                                  <img src="assets/imgGalapagos/bacalao.jpg" style="height: 260px;" class="card-img-top" alt="..." id="image-1" />
                                   <div class="card-body">
                                     <h5 class="card-title">Bacalao con papas</h5>
                                     <p class="card-text ctex" style="text-align: justify;" id="marinero">
@@ -469,8 +407,7 @@
                               </div>
                               <div class="col-lg-4 col-md-8" style="padding: 20px">
                                 <div class="card text-center ">
-                                  <img src="assets/imgGalapagos/ceviche.jpg" style="height: 282px;" class="card-img-top"
-                                    alt="..." />
+                                  <img src="assets/imgGalapagos/ceviche.jpg" style="height: 282px;" class="card-img-top" alt="..." />
                                   <div class="card-body">
                                     <h5 class="card-title">Ceviche de canchalagua</h5>
                                     <p class="card-text ctex" style="text-align: justify;" id="marinero">
@@ -492,8 +429,7 @@
                                 <div class="card text-center justify-content-center">
                                   <div class="row no-gutters">
                                     <div class="col-lg-4 col-md-12 col-xs-12">
-                                      <img src="assets/imgGalapagos/ceviche.jpg" height="" class=" imgcevi card-img-top"
-                                        alt="..." id="imgcevi" />
+                                      <img src="assets/imgGalapagos/ceviche.jpg" height="" class=" imgcevi card-img-top" alt="..." id="imgcevi" />
                                     </div>
                                     <div class="col-lg-8 col-md-12 col-xs-12" id="ceviche">
                                       <div class="card-body">
@@ -526,8 +462,7 @@
                   <div class="card">
                     <div class="card-header" id="headingTwo">
                       <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                          data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                           <p id="lugTuristicos" style="text-align: center;">La diversidad de lugares
                             turisticos</p>
                         </button>
@@ -542,8 +477,7 @@
                             <div class="row">
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/garrapatero.png " class="card-img-top accordion-image"
-                                    alt="El Garrapatero">
+                                  <img src="assets/imgGalapagos/garrapatero.png " class="card-img-top accordion-image" alt="El Garrapatero">
                                   <div class="card-body">
                                     <h5 class="card-title" s>El Garrapatero</h5>
                                     <p class="card-text">El Garrapatero se encuentra en la costa sureste de la Isla
@@ -567,8 +501,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/centro.jpeg" class="card-img-top accordion-image"
-                                    alt="Centro de Crianza Fausto Llerena">
+                                  <img src="assets/imgGalapagos/centro.jpeg" class="card-img-top accordion-image" alt="Centro de Crianza Fausto Llerena">
                                   <div class="card-body">
                                     <h5 class="card-title">Centro de Crianza Fausto Llerena</h5>
                                     <p class="card-text">El Centro de Crianza Fausto Llerena fue creado en el año 1965.
@@ -588,8 +521,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/tortuga.png" class="card-img-top accordion-image"
-                                    alt="Tortuga Bay">
+                                  <img src="assets/imgGalapagos/tortuga.png" class="card-img-top accordion-image" alt="Tortuga Bay">
                                   <div class="card-body">
                                     <h5 class="card-title">Tortuga Bay</h5>
                                     <p class="card-text">Bahía Tortuga es una hermosa playa de arena blanca, ubicada en
@@ -606,8 +538,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/laguna.jpg" class="card-img-top accordion-image"
-                                    alt="LAGUNA LAS NINFAS">
+                                  <img src="assets/imgGalapagos/laguna.jpg" class="card-img-top accordion-image" alt="LAGUNA LAS NINFAS">
                                   <div class="card-body">
                                     <h5 class="card-title">LAGUNA LAS NINFAS</h5>
                                     <p class="card-text">Esta laguna se encuentra en el cantón Santa Cruz, provincia de
@@ -631,8 +562,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/volcan.jpg" class="card-img-top accordion-image"
-                                    alt="VOLCÁN SIERRA NEGRA">
+                                  <img src="assets/imgGalapagos/volcan.jpg" class="card-img-top accordion-image" alt="VOLCÁN SIERRA NEGRA">
                                   <div class="card-body">
                                     <h5 class="card-title">VOLCÁN SIERRA NEGRA</h5>
                                     <p class="card-text">Es considerado como el más antiguo de los volcanes de la isla.
@@ -654,8 +584,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/tintoreras.jpeg" class="card-img-top accordion-image"
-                                    alt="LAS TINTORERAS">
+                                  <img src="assets/imgGalapagos/tintoreras.jpeg" class="card-img-top accordion-image" alt="LAS TINTORERAS">
                                   <div class="card-body">
                                     <h5 class="card-title">LAS TINTORERAS</h5>
                                     <p class="card-text">El islote Las Tintoreras se encuentra ubicado al sur de Puerto
@@ -681,8 +610,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/ratonera.png" class="card-img-top accordion-image"
-                                    alt="LA RATONERA">
+                                  <img src="assets/imgGalapagos/ratonera.png" class="card-img-top accordion-image" alt="LA RATONERA">
                                   <div class="card-body">
                                     <h5 class="card-title">LA RATONERA</h5>
                                     <p class="card-text">La Ratonera, ubicada en Santa Cruz, Galápagos, está localizada
@@ -701,8 +629,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/gemelos.jpg" class="card-img-top accordion-image"
-                                    alt="LOS GEMELOS">
+                                  <img src="assets/imgGalapagos/gemelos.jpg" class="card-img-top accordion-image" alt="LOS GEMELOS">
                                   <div class="card-body">
                                     <h5 class="card-title">LOS GEMELOS</h5>
                                     <p class="card-text">
@@ -721,8 +648,7 @@
                               </div>
                               <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="card">
-                                  <img src="assets/imgGalapagos/playa.png" class="card-img-top accordion-image"
-                                    alt="PLAYA DE LA ESTACIÓN">
+                                  <img src="assets/imgGalapagos/playa.png" class="card-img-top accordion-image" alt="PLAYA DE LA ESTACIÓN">
                                   <div class="card-body">
                                     <h5 class="card-title">PLAYA DE LA ESTACIÓN</h5>
                                     <p class="card-text">La Playa de la Estación, ubicada en Santa Cruz, Galápagos, está
@@ -751,15 +677,13 @@
                   <div class="card">
                     <div class="card-header" id="headingThree">
                       <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                          data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                           <p id="costTradiciones" style="text-align: center;">Tradiciones</p>
                         </button>
                       </h2>
                     </div>
 
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                      data-parent="#accordionExample">
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                       <div class="card-body">
 
 
@@ -792,8 +716,7 @@
                               <div class="row">
                                 <div class="col-lg-6 col-md-12">
                                   <div class="tradicion">
-                                    <img src="assets/imgGalapagos/baile.png" width="500px" height="300px"
-                                      alt="Imagen del baile ">
+                                    <img src="assets/imgGalapagos/baile.png" width="500px" height="300px" alt="Imagen del baile ">
                                     <div class="myContent" style="display: none;">
                                       <h3>12 de febrero, el Día de Galápagos provincialización </h3>
                                       <p>El 12 de febrero de todos los años se conmemora el día de las Islas Galápagos,
@@ -810,8 +733,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                   <div class="tradicion">
-                                    <img src="assets/imgGalapagos/Agueda.jpg" width="500px" height="300px"
-                                      alt="Imagen de la virgen del Agueda">
+                                    <img src="assets/imgGalapagos/Agueda.jpg" width="500px" height="300px" alt="Imagen de la virgen del Agueda">
                                     <div class="myContent" style="display: none;">
                                       <h2>Las Fiestas de Santa Agueda</h2>
                                       <p> tienen su comienzo con el encendido de la hoguera en honor Santa Agueda la
@@ -841,56 +763,19 @@
               </div>
             </div>
           </div>
-          
+
           <br>
           <br>
-          
+
           <a href="Galapagos/pago2.php" class="btn btn-primary"><i class="fas fa-credit-card"></i> <span style="margin-left: 10px;">Buscas paquetes, Reserva ahora ya!</span></a>
 
         </main>
       </div>
-      <footer class="row justify-content-center ml-3 mr-3 mt-4"
-        style="border-top:3px solid; background-color: rgb(46, 48, 49); color:white">
 
-        <!-- AQUI EMPIEZA LOGOS -->
-        <div class="col-lg-4 col-md-8 col-sm-11 order-lg-1 order-md-2 order-sm-2 align-self-center">
-          <a href="index.html"><img class="img-fluid" src="assets/imgIndex/LOGO_FOOTER.jpg" alt="logo Imagen"></a>
-          <center>
-            <div class="">
-              <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/logotipo-de-instagram_f.png"
-                  width="32px" alt=""></a>
-              <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/facebook_f.png" width="32px"
-                  alt=""></a>
 
-              <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/correo-electronico-vacio_f.png"
-                  width="35px" alt=""></a>
-
-            </div>
-          </center>
-
-        </div>
-
-        <!-- AQUI EMPIEZA CONTACTENOS -->
-        <div class="col-lg-4 col-md-8 col-sm-11 order-lg-2 order-md-1 order-sm-1  align-self-center">
-          <h5 class="text-center m-4">CONTÁCTANOS</h5>
-          <p class="text-center">
-            Av. Amazonas N34-451 y Av. Atahualpa <br>
-            Quito - Ecuador <br>
-            Teléfono: 593-2-396-1300 / 1400 / 1500 <br>
-            1800-TRAVEL
-          </p>
-
-        </div>
-
-        <!-- AQUI EMPIEZA ENCUENTRANOS -->
-        <div class="col-lg-4 col-md-8 col-sm-11 order-lg-3 order-md-3 order-sm-3 align-self-center">
-          <h5 class="text-center mt-3">ENCUÉNTRANOS</h5>
-          <iframe class="border"
-            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d34061.39853387128!2d-78.49690433964722!3d-0.18395374830270877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMINISTERIO%20DE%20TURISMO!5e0!3m2!1ses!2sec!4v1685843890886!5m2!1ses!2sec"
-            width="99%" height="380px" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </footer>
+      <?php
+      @require_once 'vistas/foot2.php'
+      ?>
 
     </div>
   </div>

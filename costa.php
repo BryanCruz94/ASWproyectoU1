@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -170,45 +169,60 @@
         }
 
         .texto-agrandable {
-            transition: font-size 0.5s; /* La transición durará 0.5 segundos */
+            transition: font-size 0.5s;
+            /* La transición durará 0.5 segundos */
         }
 
         .texto-agrandable:hover {
-            font-size: 17px; /* Tamaño máximo durante el hover */
+            font-size: 17px;
+            /* Tamaño máximo durante el hover */
         }
     </style>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Ocultar el texto de las tarjetas al iniciar la página
             $("#portadaCosta").hide();
             $("#portadaCosta").fadeIn(2500);
-            $('#tituloCosta').animate({ fontSize: '58px', color: 'green' }, 2000);
+            $('#tituloCosta').animate({
+                fontSize: '58px',
+                color: 'green'
+            }, 2000);
 
         });
 
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Animación de las imágenes al hacer clic en ellas
-            $('.explicacionTuristico img').click(function () {
-                $(this).animate({ opacity: 0.5 }, 400).animate({ opacity: 1 }, 400);
+            $('.explicacionTuristico img').click(function() {
+                $(this).animate({
+                    opacity: 0.5
+                }, 400).animate({
+                    opacity: 1
+                }, 400);
             });
 
             // Animación al pasar el mouse sobre las imágenes
-            $('.explicacionTuristico img').hover(function () {
-                $(this).animate({ width: '+=20px', height: '+=20px' }, 200);
-            }, function () {
-                $(this).animate({ width: '-=20px', height: '-=20px' }, 200);
+            $('.explicacionTuristico img').hover(function() {
+                $(this).animate({
+                    width: '+=20px',
+                    height: '+=20px'
+                }, 200);
+            }, function() {
+                $(this).animate({
+                    width: '-=20px',
+                    height: '-=20px'
+                }, 200);
             });
         });
 
         //Animacion para los botones estilo acordeon
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Obtener todos los botones del acordeón
             var acc = document.getElementsByClassName("accordion");
 
             // Agregar el evento de clic a cada botón del acordeón
             for (var i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function () {
+                acc[i].addEventListener("click", function() {
                     /* Alternar entre agregar y quitar la clase "active" para activar el acordeón */
                     this.classList.toggle("active");
 
@@ -224,8 +238,6 @@
                 });
             }
         });
-
-
     </script>
 
 </head>
@@ -233,102 +245,43 @@
 <body>
     <div class="row mt-2">
         <div class="col">
-            <header class="row justify-content-center align-items-center" id="encabezado">
-                <div class="col-1  ">
-                    <div class="row justify-content-end mt-1 ml-1">
-                        <div class="col align-self-end">
-                            <a href="#"> <img class="logo" src="assets/imgIndex/logotipo-de-instagram.png" width="20px"
-                                    alt=""></a>
-                        </div>
-                    </div>
-                    <div class="row justify-content-end mt-1 ml-1">
-                        <div class="col align-self-end">
-                            <a href="#"> <img class="logo" src="assets/imgIndex/facebook.png" width="20px" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="row justify-content-end mt-1 ml-1">
-                        <div class="col align-self-end">
-                            <a href="#"> <img class="logo" src="assets/imgIndex/correo-electronico-vacio.png"
-                                    width="25px" alt=""></a>
-                        </div>
-                    </div>
+
+            <?php
+            $nombreArchivo = basename(__FILE__);
+            ?>
+            <?php
+            @require_once 'vistas/head.php'
+
+            ?>
 
 
-                </div>
-
-
-                <div class="col-10">
-                    <H1 class="text-center ">ECUA-TRAVELS</H1>
-                    <div class="text-center  h5">Al menos una vez en la vida debes visitar Ecuador, y vivir la
-                        aventura
-                        de conocer un país de paisajes tan variados y entretenimiento por montón</div>
-
-                </div>
-                <div class="col-1"></div>
-
-            </header>
-
-            <!-- EMPIEZA MENÚ DESPLEGABLE -->
-            <div id="menu">
-                <div> <a href="#resumen">
-                        <h6 class="text-center">RESÚMEN</h6>
-                    </a> </div>
-                <div> <a href="#lugTuristico">
-                        <h6 class="text-center">LUGARES TURÍSTICOS</h6>
-                    </a></div>
-                <div> <a href="#gastronomia">
-                        <h6 class="text-center">GASTRONOMÍA</h6>
-                    </a></div>
-                <div> <a href="#tradiciones">
-                        <h6 class="text-center">TRADICIONES</h6>
-                    </a> </div>
-            </div>
-
-
-            <!-- TERMINA MENPU DESPLEGABLE -->
 
             <div class="container">
 
-                <nav class=" navbar-expand-lg navbar-light bg-light">
+                <!-- EMPIEZA MENÚ DESPLEGABLE -->
+                <div id="menu">
+                    <div> <a href="#resumen">
+                            <h6 class="text-center">RESÚMEN</h6>
+                        </a> </div>
+                    <div> <a href="#lugTuristico">
+                            <h6 class="text-center">LUGARES TURÍSTICOS</h6>
+                        </a></div>
+                    <div> <a href="#gastronomia">
+                            <h6 class="text-center">GASTRONOMÍA</h6>
+                        </a></div>
+                    <div> <a href="#tradiciones">
+                            <h6 class="text-center">TRADICIONES</h6>
+                        </a> </div>
+                </div>
 
-                    <ul class="nav navbar-nav  justify-content-center text-center">
-                        <div class="col">
-                            <li class="nav-item">
-                                <!-- *AQUI SE DEBE CAMBIAR EL HIPERVINCULO** -->
-                                <a class="nav-link " href="index.html">INICIO</a>
-                            </li>
-                        </div>
-                        <div class="col">
-                            <li class="nav-item">
-                                <a class="nav-link  text-light bg-dark fw-bold" href="costa.html">COSTA</a>
-                            </li>
-                        </div>
-                        <div class="col">
-                            <li class="nav-item">
-                                <a class="nav-link" href="sierra.html">SIERRA</a>
-                            </li>
-                        </div>
-                        <div class="col">
-                            <li class="nav-item">
-                                <a class="nav-link" href="amazon.html">AMAZONÍA</a>
-                            </li>
-                        </div>
-                        <div class="col">
-                            <li class="nav-item">
-                                <a class="nav-link" href="galapagos.html">GALÁPAGOS</a>
-                            </li>
-                        </div>
-                    </ul>
 
-                </nav>
+                <!-- TERMINA MENPU DESPLEGABLE -->
 
 
                 <main>
                     <!-- ** A PARTIR DE AQUÍ VA EL CÓDIGO DE CADA REGIÓN *** -->
 
-                    <h2 id="tituloCosta"
-                        style="padding: 20px 0px 0px; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif "
-                        class="animated-tittle">COSTA ECUATORIANA</h2>
+                    <h2 id="tituloCosta" style="padding: 20px 0px 0px; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif " class="animated-tittle">COSTA ECUATORIANA</h2>
                     <div class="m-2 text-center">
 
                         <div class="container">
@@ -473,9 +426,9 @@
                                         <div class="detalleTur col-lg-8">
                                             <br>
                                             <center>
-                                                <h5 > Montañita</h5>
+                                                <h5> Montañita</h5>
                                             </center>
-                                            <p >Un pequeño pueblo convertido en punto de encuentro para todo turista que
+                                            <p>Un pequeño pueblo convertido en punto de encuentro para todo turista que
                                                 visita el Ecuador;
                                                 encuentras gente de distintas partes del mundo, atraídos por sus
                                                 reconocidas
@@ -495,7 +448,7 @@
                                             <center>
                                                 <h5> Bosque Petrificado Puyango</h5>
                                             </center>
-                                            <p >Conformado por árboles con una edad aproximada de 100 millones de años y
+                                            <p>Conformado por árboles con una edad aproximada de 100 millones de años y
                                                 es
                                                 tal vez la mayor
                                                 colección de madera petrificada en el mundo; el ejemplar más grande
@@ -517,7 +470,7 @@
                                             <center>
                                                 <h5> Atacames</h5>
                                             </center>
-                                            <p >Se localiza al norte de la región litoral del Ecuador, asentada en una
+                                            <p>Se localiza al norte de la región litoral del Ecuador, asentada en una
                                                 extensa llanura, a
                                                 orillas del océano Pacífico. Es famosa en todo el Ecuador por poseer una
                                                 de
@@ -542,7 +495,7 @@
                                             <center>
                                                 <h5> Playa Los Frailes</h5>
                                             </center>
-                                            <p >Una playa encantadora y muy limpia (gracias a que se encuentra dentro del
+                                            <p>Una playa encantadora y muy limpia (gracias a que se encuentra dentro del
                                                 Parque Nacional
                                                 Machalilla,), su arena es blanca, el tono del mar cambia a turquesa y en
                                                 el
@@ -598,8 +551,7 @@
                                     <h4 id="gastronomia">Gastronomía</h4>
                                     <div class=" explicacionGastronomia col-lg-12">
                                         <br>
-                                        <img src="imgCosta/Encocado.jpg" class="rounded float-left" alt="..."
-                                            height="200px" width="300px">
+                                        <img src="imgCosta/Encocado.jpg" class="rounded float-left" alt="..." height="200px" width="300px">
 
                                     </div>
 
@@ -628,8 +580,7 @@
 
                                     <div class=" explicacionGastronomia col-lg-12">
                                         <br>
-                                        <img src="imgCosta/Encebollados.jpg" class="rounded float-left" alt="..."
-                                            height="200px" width="300px">
+                                        <img src="imgCosta/Encebollados.jpg" class="rounded float-left" alt="..." height="200px" width="300px">
 
                                     </div>
                                     <div class="rowGatronomia  col-lg-12">
@@ -659,8 +610,7 @@
 
                                     <div class=" explicacionGastronomia col-lg-12">
                                         <br>
-                                        <img src="imgCosta/parrilla.jpeg " class="rounded float-left" alt="..."
-                                            height="200px" width="300px">
+                                        <img src="imgCosta/parrilla.jpeg " class="rounded float-left" alt="..." height="200px" width="300px">
 
                                     </div>
                                     <div class="rowGatronomia col-lg-12">
@@ -684,8 +634,7 @@
 
                                     <div class=" explicacionGastronomia col-lg-12">
                                         <br>
-                                        <img src="imgCosta/tigrillo.jpg " class="rounded float-left" alt="..."
-                                            height="200px" width="300px">
+                                        <img src="imgCosta/tigrillo.jpg " class="rounded float-left" alt="..." height="200px" width="300px">
 
                                     </div>
                                     <div class="rowGatronomia col-lg-12">
@@ -713,8 +662,7 @@
 
                                     <div class=" explicacionGastronomia col-lg-12">
                                         <br>
-                                        <img src="imgCosta/viche.jpg " class="rounded float-left" alt="..."
-                                            height="200px" width="300px">
+                                        <img src="imgCosta/viche.jpg " class="rounded float-left" alt="..." height="200px" width="300px">
 
                                     </div>
                                     <div class="rowGatronomia col-lg-12">
@@ -755,8 +703,7 @@
 
                                         <div class=" explicacionTradiciones col-lg-3">
                                             <br>
-                                            <img class="card-img-top accordion-image" src="imgCosta/RodeoMontubio.jpg "
-                                                class="img-thumbnail" height="200px" width="300px">
+                                            <img class="card-img-top accordion-image" src="imgCosta/RodeoMontubio.jpg " class="img-thumbnail" height="200px" width="300px">
 
                                         </div>
 
@@ -777,15 +724,13 @@
                                         </div>
                                         <div class=" explicacionTradiciones col-lg-3">
                                             <br>
-                                            <img class="card-img-top accordion-image" src="imgCosta/RodeoMontubio1.jpg "
-                                                class="img-thumbnail" height="200px" width="300px">
+                                            <img class="card-img-top accordion-image" src="imgCosta/RodeoMontubio1.jpg " class="img-thumbnail" height="200px" width="300px">
 
                                         </div>
                                         <!-- ************* -->
                                         <hr class="mt-3">
                                         <div class=" explicacionTradiciones col-lg-3">
-                                            <img class="card-img-top accordion-image" src="imgCosta/Amorfinos.jpg "
-                                                class="img-thumbnail" height="200px" width="300px">
+                                            <img class="card-img-top accordion-image" src="imgCosta/Amorfinos.jpg " class="img-thumbnail" height="200px" width="300px">
                                         </div>
 
                                         <div class="rowtradiciones col-lg-6">
@@ -803,16 +748,14 @@
                                         </div>
 
                                         <div class=" explicacionTradiciones col-lg-3">
-                                            <img class="card-img-top accordion-image" src="imgCosta/Amorfinos1.jpeg "
-                                                class="img-thumbnail" height="200px" width="300px">
+                                            <img class="card-img-top accordion-image" src="imgCosta/Amorfinos1.jpeg " class="img-thumbnail" height="200px" width="300px">
 
                                         </div>
                                         <!-- ************* -->
                                         <hr class="mt-3">
 
                                         <div class=" explicacionTradiciones col-lg-3">
-                                            <img class="card-img-top accordion-image" src="imgCosta/PolcaMontubia.jpg "
-                                                class="img-thumbnail" height="200px" width="300px">
+                                            <img class="card-img-top accordion-image" src="imgCosta/PolcaMontubia.jpg " class="img-thumbnail" height="200px" width="300px">
                                         </div>
 
                                         <div class="rowtradiciones col-lg-6">
@@ -830,8 +773,7 @@
                                         </div>
 
                                         <div class=" explicacionTradiciones col-lg-3">
-                                            <img class="card-img-top accordion-image" src="imgCosta/PolcaMontubia1.jpg "
-                                                class="img-thumbnail" height="200px" width="300px">
+                                            <img class="card-img-top accordion-image" src="imgCosta/PolcaMontubia1.jpg " class="img-thumbnail" height="200px" width="300px">
 
                                         </div>
                                     </div>
@@ -842,49 +784,9 @@
                 </main>
             </div>
 
-            <footer class="row justify-content-center ml-3 mr-3 mt-4"
-                style="border-top:3px solid; background-color: rgb(46, 48, 49); color:white">
-
-                <!-- AQUI EMPIEZA LOGOS -->
-                <div class="col-lg-4 col-md-8 col-sm-11 order-lg-1 order-md-2 order-sm-2 align-self-center">
-                    <a href="index.html"><img class="img-fluid" src="assets/imgIndex/LOGO_FOOTER.jpg"
-                            alt="logo Imagen"></a>
-
-                    <div class="">
-                        <a href="#"> <img class="logo " style="margin: 20px;"
-                                src="assets/imgIndex/logotipo-de-instagram_f.png" width="32px" alt=""></a>
-                        <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/facebook_f.png"
-                                width="32px" alt=""></a>
-
-                        <a href="#"> <img class="logo " style="margin: 20px;"
-                                src="assets/imgIndex/correo-electronico-vacio_f.png" width="35px" alt=""></a>
-
-                    </div>
-
-
-                </div>
-
-                <!-- AQUI EMPIEZA CONTACTENOS -->
-                <div class="col-lg-4 col-md-8 col-sm-11 order-lg-2 order-md-1 order-sm-1  align-self-center">
-                    <h5 class="text-center m-4">CONTÁCTANOS</h5>
-                    <p class="text-center">
-                        Av. Amazonas N34-451 y Av. Atahualpa <br>
-                        Quito - Ecuador <br>
-                        Teléfono: 593-2-396-1300 / 1400 / 1500 <br>
-                        1800-TRAVEL
-                    </p>
-
-                </div>
-
-                <!-- AQUI EMPIEZA ENCUENTRANOS -->
-                <div class="col-lg-4 col-md-8 col-sm-11 order-lg-3 order-md-3 order-sm-3 align-self-center">
-                    <h5 class="text-center mt-3">ENCUÉNTRANOS</h5>
-                    <iframe class="border"
-                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d34061.39853387128!2d-78.49690433964722!3d-0.18395374830270877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMINISTERIO%20DE%20TURISMO!5e0!3m2!1ses!2sec!4v1685843890886!5m2!1ses!2sec"
-                        width="99%" height="380px" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </footer>
+           <?php
+            @require_once 'vistas/foot2.php'
+           ?>
 
         </div>
     </div>
