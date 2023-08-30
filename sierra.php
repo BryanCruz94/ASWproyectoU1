@@ -180,94 +180,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="row mt-2">
         <div class="col">
-            <header class="row justify-content-center align-items-center" id="encabezado">
-                <div class="col-1  ">
-                    <div class="row justify-content-end mt-1 ml-1">
-                        <div class="col align-self-end">
-                            <a href="#"> <img class="logo" src="assets/imgIndex/logotipo-de-instagram.png" width="20px" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="row justify-content-end mt-1 ml-1">
-                        <div class="col align-self-end">
-                            <a href="#"> <img class="logo" src="assets/imgIndex/facebook.png" width="20px" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="row justify-content-end mt-1 ml-1">
-                        <div class="col align-self-end">
-                            <a href="#"> <img class="logo" src="assets/imgIndex/correo-electronico-vacio.png" width="25px" alt=""></a>
-                        </div>
-                    </div>
-
-
-                </div>
-
-
-                <div class="col-10">
-                    <H1 class="text-center ">ECUA-TRAVELS</H1>
-                    <div class="text-center  h5">Al menos una vez en la vida debes visitar Ecuador, y vivir la
-                        aventura
-                        de conocer un país de paisajes tan variados y entretenimiento por montón</div>
-
-                </div>
-                <div class="col-1"></div>
-
-            </header>
-
-            <!-- EMPIEZA MENÚ DESPLEGABLE -->
-            <div id="menu">
-                <div> <a href="#lugTuristicos">
-                        <h6 class="text-center">LUGARES TURÍSTICOS</h6>
-                    </a> </div>
-                <div> <a href="#gastronomia">
-                        <h6 class="text-center">GASTRONOMÍA</h6>
-                    </a></div>
-                <div> <a href="#culturas">
-                        <h6 class="text-center">CULTURAS</h6>
-                    </a></div>
-                <div> <a href="#costTradiciones">
-                        <h6 class="text-center">COSTUMBRES Y TRADICIONES</h6>
-                    </a> </div>
-            </div>
-
-
-            <!-- TERMINA MENPU DESPLEGABLE -->
-
+            <?php
+            $nombreArchivo = basename(__FILE__);
+            ?>
+            <?php
+            @require_once 'vistas/head.php';
+            ?>
 
             <div class="container">
 
-                <nav class=" navbar-expand-lg navbar-light bg-light">
 
-                    <ul class="nav navbar-nav  justify-content-center text-center">
-                        <div class="col">
-                            <li class="nav-item">
-                                <!-- *************AQUI SE DEBE CAMBIAR EL HIPERVINCULO**************** -->
-                                <a class="nav-link " href="index.html">INICIO</a>
-                            </li>
-                        </div>
-                        <div class="col">
-                            <li class="nav-item">
-                                <a class="nav-link " href="costa.html">COSTA</a>
-                            </li>
-                        </div>
-                        <div class="col">
-                            <li class="nav-item">
-                                <a id="btnSierra" class="nav-link text-light bg-dark fw-bold" href="sierra.html">SIERRA</a>
-                            </li>
-                        </div>
-                        <div class="col">
-                            <li class="nav-item">
-                                <a class="nav-link" href="amazon.html">AMAZONÍA</a>
-                            </li>
-                        </div>
-                        <div class="col">
-                            <li class="nav-item">
-                                <a class="nav-link" href="galapagos.html">GALÁPAGOS</a>
-                            </li>
-                        </div>
-                    </ul>
-
-                </nav>
-
+                <!-- EMPIEZA MENÚ DESPLEGABLE -->
+                <div id="menu">
+                    <div> <a href="#lugTuristicos">
+                            <h6 class="text-center">LUGARES TURÍSTICOS</h6>
+                        </a> </div>
+                    <div> <a href="#gastronomia">
+                            <h6 class="text-center">GASTRONOMÍA</h6>
+                        </a></div>
+                    <div> <a href="#culturas">
+                            <h6 class="text-center">CULTURAS</h6>
+                        </a></div>
+                    <div> <a href="#costTradiciones">
+                            <h6 class="text-center">COSTUMBRES Y TRADICIONES</h6>
+                        </a> </div>
+                </div>
+                <!-- TERMINA MENPU DESPLEGABLE -->
 
 
                 <main>
@@ -493,41 +431,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </main>
             </div>
 
-            <footer class="row justify-content-center ml-3 mr-3 mt-4" style="border-top:3px solid; background-color: rgb(46, 48, 49); color:white">
+            
+            <?php
+                require_once 'vistas/foot2.php'
+            ?>
 
-                <!-- AQUI EMPIEZA LOGOS -->
-                <div class="col-lg-4 col-md-8 col-sm-11 order-lg-1 order-md-2 order-sm-2 align-self-center">
-                    <a href="index.html"><img class="img-fluid" src="assets/imgIndex/LOGO_FOOTER.jpg" alt="logo Imagen"></a>
-                    <center>
-                        <div class="">
-                            <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/logotipo-de-instagram_f.png" width="32px" alt=""></a>
-                            <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/facebook_f.png" width="32px" alt=""></a>
-
-                            <a href="#"> <img class="logo " style="margin: 20px;" src="assets/imgIndex/correo-electronico-vacio_f.png" width="35px" alt=""></a>
-
-                        </div>
-                    </center>
-
-                </div>
-
-                <!-- AQUI EMPIEZA CONTACTENOS -->
-                <div class="col-lg-4 col-md-8 col-sm-11 order-lg-2 order-md-1 order-sm-1  align-self-center">
-                    <h5 class="text-center m-4">CONTÁCTANOS</h5>
-                    <p class="text-center">
-                        Av. Amazonas N34-451 y Av. Atahualpa <br>
-                        Quito - Ecuador <br>
-                        Teléfono: 593-2-396-1300 / 1400 / 1500 <br>
-                        1800-TRAVEL
-                    </p>
-
-                </div>
-
-                <!-- AQUI EMPIEZA ENCUENTRANOS -->
-                <div class="col-lg-4 col-md-8 col-sm-11 order-lg-3 order-md-3 order-sm-3 align-self-center">
-                    <h5 class="text-center mt-3">ENCUÉNTRANOS</h5>
-                    <iframe class="border" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d34061.39853387128!2d-78.49690433964722!3d-0.18395374830270877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMINISTERIO%20DE%20TURISMO!5e0!3m2!1ses!2sec!4v1685843890886!5m2!1ses!2sec" width="99%" height="380px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </footer>
         </div>
     </div>
 

@@ -7,11 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
@@ -71,83 +68,24 @@
 
 
     <script src="assets/js/script_Index.js">
-    //    SCRIPT REALIZADO EN DOCUMENTO SEPARADO
-
+        //    SCRIPT REALIZADO EN DOCUMENTO SEPARADO
     </script>
 
 
 </head>
 
 <body>
-
     <div class="row mt-2">
         <div class="col">
-            <header class="row justify-content-center align-items-center" id="encabezado">
-                <div class="col-1  ">
-                    <div class="row justify-content-end mt-1 ml-1">
-                        <div class="col align-self-end">
-                            <a href="#"> <img class="logo" src="assets/imgIndex/logotipo-de-instagram.png" width="20px"
-                                    alt=""></a>
-                        </div>
-                    </div>
-                    <div class="row justify-content-end mt-1 ml-1">
-                        <div class="col align-self-end">
-                            <a href="#"> <img class="logo" src="assets/imgIndex/facebook.png" width="20px" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="row justify-content-end mt-1 ml-1">
-                        <div class="col align-self-end">
-                            <a href="#"> <img class="logo" src="assets/imgIndex/correo-electronico-vacio.png"
-                                    width="25px" alt=""></a>
-                        </div>
-                    </div>
 
-
-                </div>
-
-                <div class="col-10">
-                    <H1 class="text-center ">ECUA-TRAVELS</H1>
-                    <div class="text-center  h5">Al menos una vez en la vida debes visitar Ecuador, y vivir la
-                        aventura
-                        de conocer un país de paisajes tan variados y entretenimiento por montón</div>
-
-                </div>
-                <div class="col-1"></div>
-
-            </header>
+            <?php
+            $nombreArchivo = basename(__FILE__);
+            ?>
+            <?php
+            @require_once 'vistas/head.php';
+            ?>
             <div class="container">
-
-                <nav class=" navbar-expand-lg navbar-light bg-light">
-
-                    <ul class="nav navbar-nav  justify-content-center text-center">
-                        <div class="col">
-                            <li class="nav-item">
-                                <a class="nav-link text-light bg-dark  fw-bold" href="index.html">INICIO</a>
-                            </li>
-                        </div>
-                        <div class="col">
-                            <li class="nav-item">
-                                <a class="nav-link " href="costa.html">COSTA</a>
-                            </li>
-                        </div>
-                        <div class="col">
-                            <li class="nav-item">
-                                <a class="nav-link " href="sierra.php">SIERRA</a>
-                            </li>
-                        </div>
-                        <div class="col">
-                            <li class="nav-item">
-                                <a class="nav-link" href="amazon.html">AMAZONÍA</a>
-                            </li>
-                        </div>
-                        <div class="col">
-                            <li class="nav-item">
-                                <a class="nav-link" href="galapagos.html">GALÁPAGOS</a>
-                            </li>
-                        </div>
-                    </ul>
-
-                </nav>
+                
 
 
                 <main>
@@ -155,19 +93,14 @@
                     <div class="container mt-2">
                         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                                    aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="assets/imgIndex/costa.jpg" class="d-block w-100" alt="costa"
-                                        style="height: 600px;">
+                                    <img src="assets/imgIndex/costa.jpg" class="d-block w-100" alt="costa" style="height: 600px;">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h4>COSTA</h4>
                                         <p style="font-size: 18px;">En la Costa, disfruta de kilómetros de playas de
@@ -179,8 +112,7 @@
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="assets/imgIndex/sierra_portada2.jpg" class="d-block w-100" alt="sierra"
-                                        style="height: 600px;">
+                                    <img src="assets/imgIndex/sierra_portada2.jpg" class="d-block w-100" alt="sierra" style="height: 600px;">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h4>SIERRA</h4>
                                         <p style="font-size: 18px;">En la Sierra, maravíllate con los majestuosos
@@ -192,8 +124,7 @@
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="assets/imgIndex/amazonia_portada2.jpg" class="d-block w-100"
-                                        alt="amazonia" style="height: 600px;">
+                                    <img src="assets/imgIndex/amazonia_portada2.jpg" class="d-block w-100" alt="amazonia" style="height: 600px;">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h4>AMAZONÍA</h4>
                                         <p style="font-size: 18px;">En la Amazonía, adéntrate en la selva tropical más
@@ -207,8 +138,7 @@
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="assets/imgIndex/galapagos_portada2.jpg" class="d-block w-100"
-                                        alt="amazonia" style="height: 600px;">
+                                    <img src="assets/imgIndex/galapagos_portada2.jpg" class="d-block w-100" alt="amazonia" style="height: 600px;">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h4>GALÁPAGOS</h4>
                                         <p style="font-size: 18px;">Por último, pero no menos importante, visita las
@@ -222,13 +152,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Anterior</span>
                             </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Siguiente</span>
                             </button>
@@ -303,76 +231,9 @@
                 </main>
             </div>
 
-            <footer class="row justify-content-center ml-3 mr-3 mt-4"
-                style="border-top:3px solid; background-color: rgb(46, 48, 49); color:white">
-
-                <div class="col-lg-4 col-md-8 col-sm-11 order-lg-1 order-md-2 order-sm-2 align-self-center">
-                    <h5 class="text-center m-2">DÉJANOS TUS COMENTARIOS</h5>
-                    <form action="#" id="formulario" class="border rounded p-4" style="background-color: #c3dccb91;">
-                        <!-- fila de datos -->
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="form-group">
-                                    <label for="nombre">Nombre y Apellido: </label>
-                                    <input type="text" class="form-control" placeholder="Nombre y Apellido"
-                                        name="nombre" id="nombre_Form">
-                                </div>
-                                <div class="form-group">
-                                    <label for="nombre">Correo Electrónico: </label>
-                                    <input type="text" class="form-control" placeholder="@espe.edu.ec" name="nombre"
-                                        id="correo_Form">
-                                </div>
-                                <div class="form-group">
-                                    <label for="fechaNac">Fecha Nacimiento: </label>
-                                    <input type="date" class="form-control" name="fechaNac" id="fechaNac_Form">
-                                </div>
-                                <div class="form-group">
-                                    <label for="mensaje">Mensaje: </label>
-                                    <textarea name="mensaje" id="mensaje_Form" cols="30" rows="2" class="form-control">
-                                        </textarea>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-                        <!-- fila de condiciones -->
-                        <div class="row justify-content-center">
-                            <div class="col text-center">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" name="terminos" id="terminos"
-                                            class="form-check-label mr-2">Acepto recibir correos
-                                        informativos</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- fila de boton -->
-                        <div class="row justify-content-center mt-2">
-                            <div class="col-lg-5 col-md-11 col-sm-11 col-xm-11 btn btn-primary" type="submit"
-                                onclick="validarDatos()">Enviar</div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-4 col-md-8 col-sm-11 order-lg-2 order-md-1 order-sm-1  align-self-center">
-                    <h5 class="text-center m-4">CONTÁCTANOS</h5>
-                    <p class="text-center">
-                        Av. Amazonas N34-451 y Av. Atahualpa <br>
-                        Quito - Ecuador <br>
-                        Teléfono: 593-2-396-1300 / 1400 / 1500 <br>
-                        1800-TRAVEL
-                    </p>
-
-                </div>
-                <div class="col-lg-4 col-md-8 col-sm-11 order-lg-3 order-md-3 order-sm-3 align-self-center">
-                    <h5 class="text-center mt-3">ENCUÉNTRANOS</h5>
-                    <iframe class="border"
-                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d34061.39853387128!2d-78.49690433964722!3d-0.18395374830270877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMINISTERIO%20DE%20TURISMO!5e0!3m2!1ses!2sec!4v1685843890886!5m2!1ses!2sec"
-                        width="99%" height="380px" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </footer>
+            <?php
+            @require_once 'vistas/foot.php';
+            ?>
 
         </div>
     </div>
