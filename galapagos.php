@@ -251,12 +251,6 @@
       );
 
 
-      $("#ceviche").hide();
-      $('#imgcevi').click(function () {
-        $(this).attr("class", "card-img-top nuevocev");
-        $("#ceviche").fadeIn(1000);
-      });
-
       $('.collapse').on('show.bs.collapse', function () {
         $(this).prev('.card-header').find('.btn').addClass('active');
         $(this).prev('.card-header').find('.btn').removeClass('collapsed');
@@ -269,14 +263,27 @@
         $(this).prev('.card-header').find('.btn').attr('aria-expanded', false);
       });
 
+
+      $("#ceviche").hide();
+      $('#imgcevi').click(function () {
+        $(this).attr("class", "card-img-top nuevocev");
+        $("#ceviche").fadeIn(1000);
+      });
+
+
       $('#myButton').on('click', function () {
         $(this).hide();
         $('.myContent').fadeIn(1000);
       });
 
+
+      
       $('#tituloAmaz').animate({ fontSize: '58px', color: 'green' }, 2000);
 
       
+
+
+
       $(".menu").hover(function () {
 
         $(this).animate({
@@ -323,7 +330,7 @@
 
 
         <div class="col-10">
-          <H1 class="text-center ">ECUA-TRAVELS</H1>
+          <H1 class="text-center ">ECUA-TRAVELS v3</H1>
           <div class="text-center  h5">Al menos una vez en la vida debes visitar Ecuador, y vivir la
             aventura
             de conocer un país de paisajes tan variados y entretenimiento por montón</div>
@@ -389,9 +396,11 @@
 
 
         <main>
+
           <h2 id="tituloAmaz"
             style="padding: 20px 0 0 0 ; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif "
             class="animated-tittle">GALÁPAGOS</h2>
+            
           <img id="walking-gif" src="assets/imgGalapagos/trutr.gif">
 
           <div class="m-2 text-center">
@@ -832,7 +841,11 @@
               </div>
             </div>
           </div>
-
+          
+          <br>
+          <br>
+          
+          <a href="pago2.php" class="btn btn-primary"><i class="fas fa-credit-card"></i> <span style="margin-left: 10px;">Buscas paquetes, Reserva ahora ya!</span></a>
 
         </main>
       </div>

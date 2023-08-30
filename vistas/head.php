@@ -78,7 +78,13 @@
             </div>
             <div class="col">
                 <li class="nav-item">
-                    <a class="nav-link" href="galapagos.html">GALÁPAGOS</a>
+                <?php
+                    if ($nombreArchivo == 'galapagos.php') {
+                        echo '<a class="nav-link text-light bg-dark  fw-bold" href="galapagos.php">GALAPAGOS</a>';
+                    } else {
+                        echo '<a class="nav-link " href="galapagos.php">GALAPAGOS</a>';
+                    }
+                    ?>
                 </li>
             </div>
         </ul>
