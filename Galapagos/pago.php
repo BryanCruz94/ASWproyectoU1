@@ -39,8 +39,11 @@
                         <i class="fab fa-cc-visa fa-5x mb-3"></i>
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Número de Tarjeta">
+                            <input type="text" class="form-control" id="visa-number" placeholder="Número de Tarjeta" required pattern="[0-9]{13,19}">
                             </div>
+                            <div class="form-group">
+        <input type="text" class="form-control" id="visa-name" placeholder="Nombre del Dueño de la Tarjeta" >
+    </div>
                             <div class="form-row">
                                 <div class="col-md-6 form-group">
                                     <input type="text" class="form-control" placeholder="MM/YY">
@@ -65,8 +68,11 @@
                         <i class="fab fa-cc-mastercard fa-5x mb-3"></i>
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Número de Tarjeta">
+                            <input type="text" class="form-control" id="mastercard-number" placeholder="Número de Tarjeta" required pattern="[0-9]{13,19}">
                             </div>
+                            <div class="form-group">
+        <input type="text" class="form-control" id="mastercard-name" placeholder="Nombre del Dueño de la Tarjeta">
+    </div>
                             <div class="form-row">
                                 <div class="col-md-6 form-group">
                                     <input type="text" class="form-control" placeholder="MM/YY">
@@ -104,7 +110,7 @@
                     <div class="card-body">
                         <i class="fas fa-mobile-alt fa-5x mb-3"></i>
                         <p>Escanea el código QR para realizar la transferencia móvil.</p>
-                        <img id="qr" src="assets/imgGalapagos/qr.png" alt="">
+                        <img id="qr" src="assets\imgGalapagos\qr.png" alt="">
                     </div>
                 </div>
             </div>
@@ -118,17 +124,40 @@
     </div>
 
 
-    <script>
-        new WOW().init();
-        // Captura el evento de clic en el botón "Pagar"
-        $('.btn').click(function () {
-            // Obtiene la cantidad de productos a pagar
-            // var numProductos = $('input[name="cantidad-productos"]').val();
-            // Muestra la alerta con la cantidad de productos pagados
-            // alert('Usted ha pagado ' + numProductos + ' productos.');
-            alert('Usted ya ha pagado ');
+
+<script>
+    $(document).ready(function () {
+        // ...
+
+        $('.btn-primary').click(function () {
+    var form = $(this).closest('form');
+
+    if (validarTarjeta(form)) {
+        var tarjeta = form.find('input[id$="-number"]').val(); // Obtener el número de tarjeta
+        var nombre = form.find('input[id$="-name"]').val(); // Obtener el nombre del dueño de la tarjeta
+
+        alert('Datos de la tarjeta válidos. Procesando el pago...');
+        alert('Usted ya ha pagado ');
+
+        // Enviar el número de tarjeta y el nombre al archivo PHP para guardar en el archivo de texto
+        $.post("guardar_tarjeta.php", { tarjeta: tarjeta, nombre: nombre }, function (data) {
+            console.log(data);
         });
-    </script>
+    } else {
+        alert('Datos de la tarjeta inválidos. Por favor, verifique.');
+    }
+});
+
+
+        // Función para validar la tarjeta
+        function validarTarjeta(form) {
+            var numTarjeta = form.find('input[type="text"]').val();
+            var numPattern = /^[0-9]{13,19}$/; // Expresión regular para validar el número de tarjeta
+
+            return numPattern.test(numTarjeta); // Verificar si el número de tarjeta cumple con el patrón
+        }
+    });
+</script>
 
 
 </body>
