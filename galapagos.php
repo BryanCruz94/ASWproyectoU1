@@ -203,6 +203,11 @@
     .card-title {
       text-align: center;
     }
+
+    .ref{
+      display: block;
+      
+    }
   </style>
 
   <script>
@@ -767,7 +772,7 @@
           <br>
           <br>
 
-          <a href="Galapagos/pago2.php" class="btn btn-primary"><i class="fas fa-credit-card"></i> <span style="margin-left: 10px;">Buscas paquetes, Reserva ahora ya!</span></a>
+          <a href="Galapagos/pago2.php" class="ref btn btn-primary"><i class="fas fa-credit-card"></i> <span style="margin-left: 10px;">Buscas paquetes, reserva ahora ya!</span></a>
 
         </main>
       </div>
