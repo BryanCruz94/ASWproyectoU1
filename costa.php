@@ -738,11 +738,11 @@
                                 <!-- ** PUBLICIDAD *** -->
 
                                 <div class="ad-container">
-                                    <h2 class="ad-title">¡Gran Oferta!</h2>
-                                    <img src="imgCosta/publicidad.jpg " class="rounded float-left" alt="Oferta Especial"
+                                    <h2 class="ad-title">¡Restaurante!</h2>
+                                    <img src="https://miredvista.co/wp-content/uploads/2022/09/sitios-17.jpg " class="rounded float-left" alt="Oferta Especial"
                                         height="200px" width="300px">
 
-                                    <p class="ad-description">Aprovecha nuestra oferta especial por tiempo limitado. ¡No
+                                    <p class="ad-description">Aprovecha y visitanos degustando la buena sazon Manabita. ¡No
                                         te lo pierdas!</p>
                                     <a href="costa/tienda1.php" target="_blank">Más información</a>
                                 </div>
