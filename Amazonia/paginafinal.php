@@ -5,6 +5,8 @@ include 'procesar_reserva.php';
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> 
     <title>Confirmación de Reserva</title>
     <style>
         h2 {
@@ -26,6 +28,12 @@ include 'procesar_reserva.php';
         .center {
             text-align: center;
         }
+
+        .ref{
+            margin-left: 720px;
+            padding: 10px;
+
+        }
     </style>
 </head>
 <body>
@@ -37,5 +45,7 @@ include 'procesar_reserva.php';
     <br>
     <h3 class="center">GRACIAS POR CONFIAR EN NOSOTROS!!</h3>
     <br>
+
+    <a href="../amazon.php"><button class="ref btn btn-light">Regresar</button></a>
 </body>
 </html>
