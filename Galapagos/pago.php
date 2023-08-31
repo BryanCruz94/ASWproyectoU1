@@ -110,7 +110,7 @@
                     <div class="card-body">
                         <i class="fas fa-mobile-alt fa-5x mb-3"></i>
                         <p>Escanea el código QR para realizar la transferencia móvil.</p>
-                        <img id="qr" src="assets\imgGalapagos\qr.png" alt="">
+                        <img id="qr" src="../Galapagos/qr.png" alt="">
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@
         </div>
         <div class="card-body">
             <i class="fas fa-arrow-left mb-3"></i>
-            <a href="pago2.php"><button type="button" class=" btn-primary">Regresar</button></a>
+            <a href="../galapagos.php"><button type="button" class=" btn-light">Regresar</button></a>
         </div>
 
     </div>
