@@ -39,6 +39,57 @@
             margin-top: 10px;
         }
     </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("order-form").addEventListener("submit", function (event) {
+            var nombreInput = document.querySelector('input[name="nombre"]');
+            var telefonoInput = document.querySelector('input[name="telefono"]');
+            
+            // Validación de nombre
+            if (!/^[A-Za-z\s]+$/.test(nombreInput.value)) {
+                event.preventDefault();
+                showError(nombreInput, "Ingresa un nombre válido (solo letras y espacios).");
+                scrollToElement(nombreInput);
+                return;
+            } else {
+                clearError(nombreInput);
+            }
+
+            // Validación de teléfono
+            if (!/^\d+$/.test(telefonoInput.value)) {
+                event.preventDefault();
+                showError(telefonoInput, "Ingresa un número de teléfono válido (solo números).");
+                scrollToElement(telefonoInput);
+                return;
+            } else {
+                clearError(telefonoInput);
+            }
+        });
+
+        function showError(inputElement, errorMessage) {
+            var errorDiv = inputElement.parentElement.querySelector('.error-message');
+            if (!errorDiv) {
+                errorDiv = document.createElement('div');
+                errorDiv.className = 'error-message text-danger';
+                inputElement.parentElement.appendChild(errorDiv);
+            }
+            errorDiv.textContent = errorMessage;
+        }
+
+        function clearError(inputElement) {
+            var errorDiv = inputElement.parentElement.querySelector('.error-message');
+            if (errorDiv) {
+                errorDiv.textContent = '';
+            }
+        }
+
+        function scrollToElement(element) {
+            var offset = element.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+        }
+    });
+</script>
 </head>
 
 <body>
