@@ -474,7 +474,7 @@
             </div>
             <div class=" col-2"></div>
         </div>
-
+<!-- cambios realizados  -->
 
         <div class="row justify-content-center">
             <div class="col-lg-12 col-md-12" style="padding: 10px">
