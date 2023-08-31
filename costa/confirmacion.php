@@ -50,10 +50,11 @@
         {
             $precios = [
                 "Encocado" => 5,
-                "Encebollado" => 5,
+                "Encebollado" => 3,
                 "Parrillada" => 12,
                 "Tigrillo" => 4,
                 "Viche" => 3.5,
+                "Cangrejada" => 5.5,
             ];
             return isset($precios[$plato]) ? $precios[$plato] : 0;
         }

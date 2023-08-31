@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="assets/js/script_Menu.js"></script>
+    <script src="costa/tienda1.php"></script>
 
 
 
@@ -177,10 +179,42 @@
             font-size: 17px;
             /* Tamaño máximo durante el hover */
         }
+
+        /* ESTILOS POUBLICIDAD*/
+        .ad-container {
+            border: 2px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            background-color: #f7f7f7;
+        }
+
+        .ad-title {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .ad-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .ad-description {
+            font-size: 14px;
+            color: #666;
+        }
+
+
+        /*cursor*/
+        .explicacionTuristico img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: opacity 0.4s, width 0.2s, height 0.2s;
+        }
     </style>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             // Ocultar el texto de las tarjetas al iniciar la página
             $("#portadaCosta").hide();
             $("#portadaCosta").fadeIn(2500);
@@ -191,9 +225,8 @@
 
         });
 
-        $(document).ready(function() {
-            // Animación de las imágenes al hacer clic en ellas
-            $('.explicacionTuristico img').click(function() {
+        $(document).ready(function () {
+            $('.explicacionTuristico img').click(function () {
                 $(this).animate({
                     opacity: 0.5
                 }, 400).animate({
@@ -201,13 +234,12 @@
                 }, 400);
             });
 
-            // Animación al pasar el mouse sobre las imágenes
-            $('.explicacionTuristico img').hover(function() {
+            $('.explicacionTuristico img').hover(function () {
                 $(this).animate({
                     width: '+=20px',
                     height: '+=20px'
                 }, 200);
-            }, function() {
+            }, function () {
                 $(this).animate({
                     width: '-=20px',
                     height: '-=20px'
@@ -216,13 +248,13 @@
         });
 
         //Animacion para los botones estilo acordeon
-        $(document).ready(function() {
+        $(document).ready(function () {
             // Obtener todos los botones del acordeón
             var acc = document.getElementsByClassName("accordion");
 
             // Agregar el evento de clic a cada botón del acordeón
             for (var i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
+                acc[i].addEventListener("click", function () {
                     /* Alternar entre agregar y quitar la clase "active" para activar el acordeón */
                     this.classList.toggle("active");
 
@@ -252,7 +284,7 @@
             <?php
             @require_once 'vistas/head.php'
 
-            ?>
+                ?>
 
 
 
@@ -281,7 +313,9 @@
                 <main>
                     <!-- ** A PARTIR DE AQUÍ VA EL CÓDIGO DE CADA REGIÓN *** -->
 
-                    <h2 id="tituloCosta" style="padding: 20px 0px 0px; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif " class="animated-tittle">COSTA ECUATORIANA</h2>
+                    <h2 id="tituloCosta"
+                        style="padding: 20px 0px 0px; text-align:center; font-family:Georgia, 'Times New Roman', Times, serif "
+                        class="animated-tittle">COSTA ECUATORIANA</h2>
                     <div class="m-2 text-center">
 
                         <div class="container">
@@ -551,7 +585,8 @@
                                     <h4 id="gastronomia">Gastronomía</h4>
                                     <div class=" explicacionGastronomia col-lg-12">
                                         <br>
-                                        <img src="imgCosta/Encocado.jpg" class="rounded float-left" alt="..." height="200px" width="300px">
+                                        <img src="imgCosta/Encocado.jpg" class="rounded float-left" alt="..."
+                                            height="200px" width="300px">
 
                                     </div>
 
@@ -560,7 +595,8 @@
                                         <center>
                                             <h5> Encocao </h5>
                                         </center>
-                                        <p class="texto-agrandable">Este plato de origen criollo, elaborado con pescado o mariscos es un estofado
+                                        <p class="texto-agrandable">Este plato de origen criollo, elaborado con pescado
+                                            o mariscos es un estofado
                                             hecho a bases de
                                             leche de coco. Para su preparación es necesario realizar un refrito con
                                             cebolla,
@@ -580,7 +616,8 @@
 
                                     <div class=" explicacionGastronomia col-lg-12">
                                         <br>
-                                        <img src="imgCosta/Encebollados.jpg" class="rounded float-left" alt="..." height="200px" width="300px">
+                                        <img src="imgCosta/Encebollados.jpg" class="rounded float-left" alt="..."
+                                            height="200px" width="300px">
 
                                     </div>
                                     <div class="rowGatronomia  col-lg-12">
@@ -588,7 +625,8 @@
                                         <center>
                                             <h5> Encebollado </h5>
                                         </center>
-                                        <p class="texto-agrandable">Es una sopa típica de la costa ecuatoriana, pero en especial de la provincia
+                                        <p class="texto-agrandable">Es una sopa típica de la costa ecuatoriana, pero en
+                                            especial de la provincia
                                             de
                                             Guayas. Su
                                             verdadero nombre es ‘picante de pescado’ y según varios historiadores, su
@@ -610,7 +648,8 @@
 
                                     <div class=" explicacionGastronomia col-lg-12">
                                         <br>
-                                        <img src="imgCosta/parrilla.jpeg " class="rounded float-left" alt="..." height="200px" width="300px">
+                                        <img src="imgCosta/parrilla.jpeg " class="rounded float-left" alt="..."
+                                            height="200px" width="300px">
 
                                     </div>
                                     <div class="rowGatronomia col-lg-12">
@@ -618,7 +657,8 @@
                                         <center>
                                             <h5> Parrillda </h5>
                                         </center>
-                                        <p class="texto-agrandable">Y si hablamos de la Gastronomía de Santo Domingo de los Tsáchilas, la
+                                        <p class="texto-agrandable">Y si hablamos de la Gastronomía de Santo Domingo de
+                                            los Tsáchilas, la
                                             exquisita
                                             Parrillada
                                             permite degustar las mejores carnes del Ecuador.
@@ -634,7 +674,8 @@
 
                                     <div class=" explicacionGastronomia col-lg-12">
                                         <br>
-                                        <img src="imgCosta/tigrillo.jpg " class="rounded float-left" alt="..." height="200px" width="300px">
+                                        <img src="imgCosta/tigrillo.jpg " class="rounded float-left" alt="..."
+                                            height="200px" width="300px">
 
                                     </div>
                                     <div class="rowGatronomia col-lg-12">
@@ -642,7 +683,8 @@
                                         <center>
                                             <h5> Tigrillo </h5>
                                         </center>
-                                        <p class="texto-agrandable">Plátano verde majado (cocinado y aplastado), mezclado con huevo, queso y
+                                        <p class="texto-agrandable">Plátano verde majado (cocinado y aplastado),
+                                            mezclado con huevo, queso y
                                             chicharrón son los
                                             ingredientes que conforman el plato más representativo de la provincia de El
                                             Oro. Antiguamente,
@@ -662,7 +704,8 @@
 
                                     <div class=" explicacionGastronomia col-lg-12">
                                         <br>
-                                        <img src="imgCosta/viche.jpg " class="rounded float-left" alt="..." height="200px" width="300px">
+                                        <img src="imgCosta/viche.jpg " class="rounded float-left" alt="..."
+                                            height="200px" width="300px">
 
                                     </div>
                                     <div class="rowGatronomia col-lg-12">
@@ -670,7 +713,8 @@
                                         <center>
                                             <h5> Viche </h5>
                                         </center>
-                                        <p class="texto-agrandable">La fusión de verduras, maní y pescado cocinado a fuego lento, dan forma a uno
+                                        <p class="texto-agrandable">La fusión de verduras, maní y pescado cocinado a
+                                            fuego lento, dan forma a uno
                                             de
                                             los manjares más
                                             exquisitos de Manabí: el viche. Esta icónica receta cautiva a los paladares
@@ -689,9 +733,21 @@
                                             Manabí.
                                         </p>
                                     </div>
-
-
                                 </div>
+
+                                <!-- ** PUBLICIDAD *** -->
+
+                                <div class="ad-container">
+                                    <h2 class="ad-title">¡Gran Oferta!</h2>
+                                    <img src="imgCosta/publicidad.jpg " class="rounded float-left" alt="Oferta Especial"
+                                        height="200px" width="300px">
+
+                                    <p class="ad-description">Aprovecha nuestra oferta especial por tiempo limitado. ¡No
+                                        te lo pierdas!</p>
+                                    <a href="costa/tienda1.php" target="_blank">Más información</a>
+                                </div>
+
+
 
                                 <hr>
                                 <!-- ** EXPLICACION Tradiciones *** -->
@@ -703,7 +759,8 @@
 
                                         <div class=" explicacionTradiciones col-lg-3">
                                             <br>
-                                            <img class="card-img-top accordion-image" src="imgCosta/RodeoMontubio.jpg " class="img-thumbnail" height="200px" width="300px">
+                                            <img class="card-img-top accordion-image" src="imgCosta/RodeoMontubio.jpg "
+                                                class="img-thumbnail" height="200px" width="300px">
 
                                         </div>
 
@@ -724,13 +781,15 @@
                                         </div>
                                         <div class=" explicacionTradiciones col-lg-3">
                                             <br>
-                                            <img class="card-img-top accordion-image" src="imgCosta/RodeoMontubio1.jpg " class="img-thumbnail" height="200px" width="300px">
+                                            <img class="card-img-top accordion-image" src="imgCosta/RodeoMontubio1.jpg "
+                                                class="img-thumbnail" height="200px" width="300px">
 
                                         </div>
                                         <!-- ************* -->
                                         <hr class="mt-3">
                                         <div class=" explicacionTradiciones col-lg-3">
-                                            <img class="card-img-top accordion-image" src="imgCosta/Amorfinos.jpg " class="img-thumbnail" height="200px" width="300px">
+                                            <img class="card-img-top accordion-image" src="imgCosta/Amorfinos.jpg "
+                                                class="img-thumbnail" height="200px" width="300px">
                                         </div>
 
                                         <div class="rowtradiciones col-lg-6">
@@ -748,14 +807,16 @@
                                         </div>
 
                                         <div class=" explicacionTradiciones col-lg-3">
-                                            <img class="card-img-top accordion-image" src="imgCosta/Amorfinos1.jpeg " class="img-thumbnail" height="200px" width="300px">
+                                            <img class="card-img-top accordion-image" src="imgCosta/Amorfinos1.jpeg "
+                                                class="img-thumbnail" height="200px" width="300px">
 
                                         </div>
                                         <!-- ************* -->
                                         <hr class="mt-3">
 
                                         <div class=" explicacionTradiciones col-lg-3">
-                                            <img class="card-img-top accordion-image" src="imgCosta/PolcaMontubia.jpg " class="img-thumbnail" height="200px" width="300px">
+                                            <img class="card-img-top accordion-image" src="imgCosta/PolcaMontubia.jpg "
+                                                class="img-thumbnail" height="200px" width="300px">
                                         </div>
 
                                         <div class="rowtradiciones col-lg-6">
@@ -773,7 +834,8 @@
                                         </div>
 
                                         <div class=" explicacionTradiciones col-lg-3">
-                                            <img class="card-img-top accordion-image" src="imgCosta/PolcaMontubia1.jpg " class="img-thumbnail" height="200px" width="300px">
+                                            <img class="card-img-top accordion-image" src="imgCosta/PolcaMontubia1.jpg "
+                                                class="img-thumbnail" height="200px" width="300px">
 
                                         </div>
                                     </div>
@@ -784,9 +846,9 @@
                 </main>
             </div>
 
-           <?php
+            <?php
             @require_once 'vistas/foot2.php'
-           ?>
+                ?>
 
         </div>
     </div>
