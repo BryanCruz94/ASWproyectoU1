@@ -46,6 +46,6 @@ include 'procesar_reserva.php';
     <h3 class="center">GRACIAS POR CONFIAR EN NOSOTROS!!</h3>
     <br>
 
-    <a href="../amazon.php"><button class="ref btn btn-light">Regresar</button></a>
+    <a href="../index.php"><button class="ref btn btn-light">Regresar al inicio</button></a>
 </body>
 </html>

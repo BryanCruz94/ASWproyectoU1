@@ -18,3 +18,12 @@ Viche - Cantidad: 1 - Precio unitario: $3.5 - Subtotal: $3.5
 Total: $13.5
 
 ----------------------------------
+Nombre: Cristina
+Teléfono: 0991441174
+
+Platos:
+Tigrillo - Cantidad: 2 - Precio unitario: $4 - Subtotal: $8
+
+Total: $8
+
+----------------------------------
