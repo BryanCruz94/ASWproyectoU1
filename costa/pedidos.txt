@@ -18,3 +18,31 @@ Viche - Cantidad: 1 - Precio unitario: $3.5 - Subtotal: $3.5
 Total: $13.5
 
 ----------------------------------
+Nombre: Dayana Vergara
+Teléfono: 0962759035
+
+Platos:
+Encocado - Cantidad: 3 - Precio unitario: $5 - Subtotal: $15
+
+Total: $15
+
+----------------------------------
+Nombre: Dayana Vergara
+Teléfono: 0962759035
+
+Platos:
+Encocado - Cantidad: 3 - Precio unitario: $5 - Subtotal: $15
+
+Total: $15
+
+----------------------------------
+Nombre: Mishell Bravo
+Teléfono: 0962759035
+
+Platos:
+Encocado - Cantidad: 2 - Precio unitario: $5 - Subtotal: $10
+Tigrillo - Cantidad: 0 - Precio unitario: $4 - Subtotal: $0
+
+Total: $10
+
+----------------------------------

@@ -739,7 +739,7 @@
 
                                 <div class="ad-container">
                                     <h2 class="ad-title">¡Restaurante!</h2>
-                                    <img src="https://miredvista.co/wp-content/uploads/2022/09/sitios-17.jpg " class="rounded float-left" alt="Oferta Especial"
+                                    <img src="https://miredvista.co/wp-content/uploads/2022/09/sitios-17.jpg " class="rounded float-left" alt=""
                                         height="200px" width="300px">
 
                                     <p class="ad-description">Aprovecha y visitanos degustando la buena sazón Manabita. ¡No
