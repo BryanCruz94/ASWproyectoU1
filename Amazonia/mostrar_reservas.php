@@ -14,7 +14,7 @@
         }
 
         h1 {
-            color: #FF5733; 
+            color:grey
             text-align: center;
         }
         button {
