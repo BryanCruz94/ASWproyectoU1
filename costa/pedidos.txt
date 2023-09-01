@@ -1,21 +1,21 @@
-
 Nombre: Bryan Cruz
 Teléfono: 0222222
 
 Platos:
-Encebollado - Cantidad: 2 - Precio unitario: $5 - Subtotal: $10
+Encebollado - Cantidad: 1 - Precio unitario: $5 - Subtotal: $5
+Viche - Cantidad: 1 - Precio unitario: $3.5 - Subtotal: $3.5
 
-Total: $10
+Total: $8.5
 
 ----------------------------------
 Nombre: Steven Quezada
-Teléfono: 0959113863
+Teléfono: 02222
 
 Platos:
-Encebollado - Cantidad: 2 - Precio unitario: $5 - Subtotal: $10
-Viche - Cantidad: 1 - Precio unitario: $3.5 - Subtotal: $3.5
+Encocado - Cantidad: 0 - Precio unitario: $5 - Subtotal: $0
+Parrillada - Cantidad: 1 - Precio unitario: $12 - Subtotal: $12
 
-Total: $13.5
+Total: $12
 
 ----------------------------------
 Nombre: Cristina
@@ -25,5 +25,42 @@ Platos:
 Tigrillo - Cantidad: 2 - Precio unitario: $4 - Subtotal: $8
 
 Total: $8
+
+----------------------------------
+Nombre: Dayana Vergara
+Teléfono: 0962759035
+
+Platos:
+Encocado - Cantidad: 3 - Precio unitario: $5 - Subtotal: $15
+
+Total: $15
+
+----------------------------------
+Nombre: Dayana Vergara
+Teléfono: 0962759035
+
+Platos:
+Encocado - Cantidad: 3 - Precio unitario: $5 - Subtotal: $15
+
+Total: $15
+
+----------------------------------
+Nombre: Mishell Bravo
+Teléfono: 0962759035
+
+Platos:
+Encocado - Cantidad: 2 - Precio unitario: $5 - Subtotal: $10
+Tigrillo - Cantidad: 0 - Precio unitario: $4 - Subtotal: $0
+
+Total: $10
+
+----------------------------------
+Nombre: Mishell Bravo
+Teléfono: 0962759035
+
+Platos:
+Encocado - Cantidad: 5 - Precio unitario: $5 - Subtotal: $25
+
+Total: $25
 
 ----------------------------------

@@ -21,7 +21,7 @@
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
         }
     </style>
 </head>
@@ -41,7 +41,7 @@
             $platos = $_POST["platos"];
             $cantidades = $_POST["cantidades"];
 
-
+    
 
             echo "<h5>Nombre del Cliente: $nombre</h5>";
             echo "<h6>Teléfono de Contacto: $telefono</h6>";
@@ -88,7 +88,7 @@
         }
         ?>
     </div>
-    <br>
+    <br><br>
     <div class="footer">
         <footer class="text-center">
             <p>© 2023 La Hueca Manabita. Todos los derechos reservados.</p>
