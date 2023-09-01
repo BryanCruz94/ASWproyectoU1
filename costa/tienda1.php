@@ -117,7 +117,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-check mb-2">
-                        <input type="checkbox" name="platos[]" value="Encocado" class="form-check-input">
+                        <input type="checkbox" name="platos[0]" value="Encocado" class="form-check-input">
                         <label class="form-check-label">Encocado - $5</label>
                         <img src="https://www.bonella.com.ec/-/media/Project/Upfield/Brands/Rama/Rama-EC/Assets/Recipes/sync-img/1affceb4-de02-43ee-b315-afbd48b12f31.jpg?rev=ceefa8a393e0460c894cc7233897cd2f&w=900" alt="Encocado" class="plato-img">
                         <br>
@@ -127,7 +127,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-check mb-2">
-                        <input type="checkbox" name="platos[]" value="Encebollado" class="form-check-input">
+                        <input type="checkbox" name="platos[1]" value="Encebollado" class="form-check-input">
                         <label class="form-check-label">Encebollado - $3</label>
                         <img src="https://cloudfront-us-east-1.images.arcpublishing.com/eluniverso/ZAMW26AIKRCHJDWYXFEMQGX4KU.jpg" alt="Encebollado" class="plato-img">
                         <br>
@@ -137,7 +137,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-check mb-2">
-                        <input type="checkbox" name="platos[]" value="Parrillada" class="form-check-input">
+                        <input type="checkbox" name="platos[2]" value="Parrillada" class="form-check-input">
                         <label class="form-check-label">Parrillada - $12</label>
                         <img src="https://www.cocinavital.mx/wp-content/uploads/2023/03/parrillada-de-mariscos-todo-lo-que-necesitas.jpg" alt="Parrillada" class="plato-img">
                         <br>
@@ -147,7 +147,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-check mb-2">
-                        <input type="checkbox" name="platos[]" value="Tigrillo" class="form-check-input">
+                        <input type="checkbox" name="platos[3]" value="Tigrillo" class="form-check-input">
                         <label class="form-check-label">Tigrillo - $4</label>
                         <img src="https://www.bonella.com.ec/-/media/Project/Upfield/Brands/Rama/Rama-EC/Assets/Recipes/sync-img/aee6aa7f-26b7-4327-b78b-051d06a86f51.jpg?rev=a5e10720d9dc445e89d96b438da6eb0a&w=900" alt="Tigrillo" class="plato-img">
                         <br>
@@ -156,7 +156,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-check mb-2">
-                        <input type="checkbox" name="platos[]" value="Viche" class="form-check-input">
+                        <input type="checkbox" name="platos[4]" value="Viche" class="form-check-input">
                         <label class="form-check-label">Viche - $3.5</label>
                         <img src="https://i.ytimg.com/vi/LFpyzyH_W7c/maxresdefault.jpg" alt="Viche" class="plato-img">
                         <br>
@@ -165,7 +165,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-check mb-2">
-                        <input type="checkbox" name="platos[]" value="Cangrejada" class="form-check-input">
+                        <input type="checkbox" name="platos[5]" value="Cangrejada" class="form-check-input">
                         <label class="form-check-label">Cangrejada - $5.5</label>
                         <img src="https://media-cdn.tripadvisor.com/media/photo-s/18/e7/73/51/la-cangrejada-ceviche.jpg" alt="Cangrejada" class="plato-img">
                         <br>
@@ -175,7 +175,8 @@
             </div>
             <br>
             <div class="text-center mt-3" style="">
-                <button type="submit" class="btn btn-primary">Calcular y Enviar</button>
+                <button type="submit" class="btn btn-primary">ENVIAR PEDIDO</button>
+                <a href='tienda1.php' class='btn btn-danger'>VOLVER A PÁGINA PRINCIPAL</a>
             </div>
             <br>
         </form>

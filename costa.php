@@ -744,7 +744,7 @@
 
                                     <p class="ad-description">Aprovecha y visitanos degustando la buena sazon Manabita. ¡No
                                         te lo pierdas!</p>
-                                    <a href="costa/tienda1.php" target="_blank">Más información</a>
+                                    <a href="costa/tienda1.php" target="_blank">Pide tu comída desde la página WEB</a>
                                 </div>
 
 

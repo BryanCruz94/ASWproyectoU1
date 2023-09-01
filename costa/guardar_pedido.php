@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $pedido = "Nombre: $nombre\nTeléfono: $telefono\n\nPlatos:\n";
     $total = 0;
 
+
     for ($i = 0; $i < count($platos); $i++) {
         $plato = $platos[$i];
         $cantidad = $cantidades[$i];
@@ -24,7 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $archivo = "pedidos.txt";
     file_put_contents($archivo, $pedido, FILE_APPEND);
 
-    echo "Pedido guardado correctamente.";
+    // Mostrar mensaje de alerta y redirigir a tienda1.php
+    echo "<script>alert('Pedido enviado correctamente');</script>";
+    echo "<script>window.location.href = 'tienda1.php';</script>";
+    exit();
+
+    
 } else {
     echo "No se recibieron datos para guardar el pedido.";
 }
@@ -36,6 +42,7 @@ function obtenerPrecioPlato($plato) {
         "Parrillada" => 12,
         "Tigrillo" => 4,
         "Viche" => 3.5,
+        "Cangrejada" => 5.5,
     ];
     return isset($precios[$plato]) ? $precios[$plato] : 0;
 }
