@@ -14,7 +14,7 @@
         }
 
         h1 {
-            color:grey
+            color:grey;
             text-align: center;
         }
         button {
