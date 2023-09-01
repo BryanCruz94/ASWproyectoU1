@@ -41,7 +41,8 @@
             $platos = $_POST["platos"];
             $cantidades = $_POST["cantidades"];
 
-
+            print_r($platos);
+            print_r($cantidades);
 
             echo "<h5>Nombre del Cliente: $nombre</h5>";
             echo "<h6>Teléfono de Contacto: $telefono</h6>";

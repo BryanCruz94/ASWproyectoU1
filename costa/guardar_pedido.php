@@ -8,6 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $pedido = "Nombre: $nombre\nTeléfono: $telefono\n\nPlatos:\n";
     $total = 0;
 
+    print_r($platos);
+    print_r($cantidades);
 
     for ($i = 0; $i < count($platos); $i++) {
         $plato = $platos[$i];

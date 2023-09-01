@@ -176,7 +176,7 @@
             <br>
             <div class="text-center mt-3" style="">
                 <button type="submit" class="btn btn-primary">ENVIAR PEDIDO</button>
-                <a href='tienda1.php' class='btn btn-danger'>VOLVER A PÁGINA PRINCIPAL</a>
+                <a href='../costa.php' class='btn btn-danger'>VOLVER A PÁGINA PRINCIPAL</a>
             </div>
             <br>
         </form>
