@@ -175,9 +175,14 @@
             </div>
             <br>
             <div class="text-center mt-3" style="">
+<<<<<<< HEAD
                 <button type="submit" class="btn btn-primary">Calcular y Enviar</button>
                 <a href='costa.php' class='btn btn-danger'>VOLVER A PÁGINA PRINCIPAL</a>
 
+=======
+                <button type="submit" class="btn btn-primary">ENVIAR PEDIDO</button>
+                <a href='../costa.php' class='btn btn-danger'>VOLVER A PÁGINA PRINCIPAL</a>
+>>>>>>> a8a6b28891f54eca15273ce2da449af2eb9b7abd
             </div>
             <br>
         </form>
