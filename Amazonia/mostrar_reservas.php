@@ -46,7 +46,9 @@
             <h1 class="py-4">Agencia de Viajes "ECUATRAVELS"</h1>
         </div>
     </header>
+    <br>
     <h1>Confirmación de Datos...!!</h1>
+    <br>
     <table>
         <tr>
             <th>Nombre</th>
