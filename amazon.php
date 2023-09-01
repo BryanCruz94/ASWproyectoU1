@@ -568,7 +568,7 @@
         </div>
 
     </div>
-    <a href="Amazonia/index.php"><button class="ref btn btn-success" style="text-align: center; margin-left: 720px; padding-bottom:10px">Aceptar</button></a> 
+    <a href="Amazonia/index.php"><button class="ref btn btn-success" style="text-align: center; margin-left: 720px; padding-bottom:10px">Conoce sobre nuestros interesantes paquetes turisticos..!!</button></a> 
 
     </div>
     <!-- ***** AQUI FINALIZA EL CÓDIGO DE CADA REGIÓN ****** -->

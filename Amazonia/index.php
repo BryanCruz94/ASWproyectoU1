@@ -15,7 +15,7 @@ include 'procesar_reserva.php';
 <body>
     <header class="bg-dark text-white">
         <div class="container">
-            <h1 class="py-4">Agencia de Viajes "-------"</h1>
+            <h1 class="py-4">Agencia de Viajes "ECUATRAVELS"</h1>
             <nav>
                 <ul class="nav">
                     <li class="nav-item"><a class="nav-link" href="#paqueteA">Paquete A</a></li>
@@ -139,10 +139,11 @@ include 'procesar_reserva.php';
         <div class="container py-4">
             <div class="row">
                 <div class="col-md-6">
+                    <h3>ECUATRAVELS</h3>
                     <h4>Contacto</h4>
-                    <p>Dirección: [Tu dirección]</p>
-                    <p>Teléfono: [Tu número de teléfono]</p>
-                    <p>Correo: [Tu correo electrónico]</p>
+                    <p>Dirección: Av. Amazonas N34-451 y Av. Atahualpa</p>
+                    <p>Teléfono: +593-2-396-1300</p>
+                    <p>Correo: ecuatravels-593@gmail.com</p>
                 </div>
                 <div class="col-md-6">
                     <h4>Síguenos en Redes Sociales</h4>

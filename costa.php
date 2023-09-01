@@ -742,7 +742,7 @@
                                     <img src="https://miredvista.co/wp-content/uploads/2022/09/sitios-17.jpg " class="rounded float-left" alt="Oferta Especial"
                                         height="200px" width="300px">
 
-                                    <p class="ad-description">Aprovecha y visitanos degustando la buena sazon Manabita. ¡No
+                                    <p class="ad-description">Aprovecha y visitanos degustando la buena sazón Manabita. ¡No
                                         te lo pierdas!</p>
                                     <a href="costa/tienda1.php" target="_blank">Pide tu comída desde la página WEB</a>
                                 </div>
