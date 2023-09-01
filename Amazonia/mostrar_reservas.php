@@ -39,6 +39,11 @@
 </head>
 
 <body>
+<header class="bg-dark text-white">
+        <div class="container">
+            <h1 class="py-4">Agencia de Viajes "ECUATRAVELS"</h1>
+        </div>
+    </header>
     <h1>Confirmación de Datos...!!</h1>
     <table>
         <tr>
