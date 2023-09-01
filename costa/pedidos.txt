@@ -55,3 +55,12 @@ Tigrillo - Cantidad: 0 - Precio unitario: $4 - Subtotal: $0
 Total: $10
 
 ----------------------------------
+Nombre: Mishell Bravo
+Teléfono: 0962759035
+
+Platos:
+Encocado - Cantidad: 5 - Precio unitario: $5 - Subtotal: $25
+
+Total: $25
+
+----------------------------------
